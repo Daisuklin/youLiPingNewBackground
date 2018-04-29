@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>合并供应商</title>
+	<link rel="stylesheet" type="text/css" href="../css/vendorList.css" />
+	<script type="text/javascript" src="../js/jquery.js"></script>
+</head>
+<body>
+	<div class="mergeSupplier-wrap">
+		<div class="mergeSupplier-wrap-con">
+			<!-- 供应商列表标签模块 -->
+			<div class="mergeSupplier-label clearfix">
+				<div class="mergeSupplier-label-search clearfix">
+					<span class="span-tt fl">合并供应商</span>
+					<form id="searchForm" name="searchForm" method="get" action="search">
+				                        <div class="div-search fl">
+				                            <input name="k" type="text" id="keyword" class="InputBorder fl"  placeholder="杯子">
+				                            <input type="submit" class="go fr" value="搜索">
+				                            <div class="clearfix"></div>
+				                            <div class="div-search-con">
+				                            	<ul>
+				                            		<li>公司全称公司全称公司全称公司全称</li>
+				                            		<li>北京优礼品</li>
+				                            		<li>北京优创未来</li>
+				                            	</ul>
+				                            </div>
+				                            <script type="text/javascript">
+				                            	$(function() {
+				                            		$('.div-search-con li').live({
+									'mouseover':function(){ $(this).addClass('selected').siblings('li').removeClass('selected'); },
+									'click': function(){ form_submit($(this)) }	
+								});	
+					                            	function form_submit(obj){
+									$('#keyword').val( $(obj).text() );
+									closediv();
+									// $("#searchForm").submit();
+									// return false;
+								}
+								function closediv(){
+									$('.div-search-con').html('').hide();
+								}
+								$(".div-search-con ul li").click(function() {
+									var otext = $(this).html();
+									var oP = '<p>' +
+											'<span><input class="span-check" type="checkbox"></span>' +
+											'<span>ID 12345</span>' +
+											'<span>' +
+											otext + 
+											'</span>'
+										'</p>';
+									$(".mergeSupplier-tt").append( oP );
+								})
+								$(".mergeSupplier-tt .div-btn input.save").click(function() {
+									$(".mergeSupplier-tt p .span-check").each(function() {
+										if (this.checked) {
+											$(this).parent().parent().remove();
+										};
+									})
+								})
+								$(".mergeSupplier-con .span-check").click(function() {
+									$(".mergeSupplier-con .span-check").each(function() {
+										if (this.checked) {
+											$(this).parent().parent().find(".span1").addClass("blue");
+										}else {
+											$(this).parent().parent().find(".span1").removeClass("blue");
+										}
+									})
+								})
+				                            	})
+				                            </script>
+				                        </div>
+				                 </form>
+				</div>
+				<div class="mergeSupplier-tt">
+					<p>
+						<span><input class="span-check" type="checkbox"></span>
+						<span>ID 12345</span>
+						<span>A公司名称</span>
+					</p>
+					<p>
+						<span><input class="span-check" type="checkbox"></span>
+						<span>ID 12345</span>
+						<span>A公司名称</span>
+					</p>
+					<div class="div-btn">
+						<p><input type="button" class="cancel" value="检索信息"><input type="button" value="移除合并" class="save"></p>
+					</div>
+				</div>
+			</div>
+			<div class="mergeSupplier-con clearfix">
+				<p>
+					<span class="span1 bor-radius-tl">ID</span>
+					<span class="span2"><span class="span1">12345</span><span class="span2"><input class="span-check fr" type="checkbox"></span></span>
+					<span class="span3"><span class="span2"><input class="span-check" type="checkbox"></span><span class="span1">12345</span></span>
+				</p>
+				<p>
+					<span class="span1">创建时间</span>
+					<span class="span2"><span class="span1">2014-12-19</span><span class="span2"><input class="span-check fr" type="checkbox"></span></span>
+					<span class="span3"><span class="span2"><input class="span-check" type="checkbox"></span><span class="span1">12345</span></span>
+				</p>
+				<p>
+					<span class="span1">创建人</span>
+					<span class="span2"><span class="span1">陈天明</span><span class="span2"><input class="span-check fr" type="checkbox"></span></span>
+					<span class="span3"><span class="span2"><input class="span-check" type="checkbox"></span><span class="span1">12345</span></span>
+				</p>
+				<p>
+					<span class="span1">星级</span>
+					<span class="span2"><span class="span1"><i>1</i></span><span class="span2"><input class="span-check fr" type="checkbox"></span></span>
+					<span class="span3"><span class="span2"><input class="span-check" type="checkbox"></span><span class="span1"><i>1</i></span></span>
+				</p>
+				<p>
+					<span class="span1">公司名称</span>
+					<span class="span2"><span class="span1">A公司名称</span><span class="span2"><input class="span-check fr" type="checkbox"></span></span>
+					<span class="span3"><span class="span2"><input class="span-check" type="checkbox"></span><span class="span1">12345</span></span>
+				</p>
+				<p>
+					<span class="span1">成立时间</span>
+					<span class="span2"><span class="span1">5年</span><span class="span2"><input class="span-check fr" type="checkbox"></span></span>
+					<span class="span3"><span class="span2"><input class="span-check" type="checkbox"></span><span class="span1">12345</span></span>
+				</p>
+				<p>
+					<span class="span1">经营模式</span>
+					<span class="span2"><span class="span1">厂家</span><span class="span2"><input class="span-check fr" type="checkbox"></span></span>
+					<span class="span3"><span class="span2"><input class="span-check" type="checkbox"></span><span class="span1">12345</span></span>
+				</p>
+				<p>
+					<span class="span1">所在地区</span>
+					<span class="span2"><span class="span1">北京市</span><span class="span2"><input class="span-check fr" type="checkbox"></span></span>
+					<span class="span3"><span class="span2"><input class="span-check" type="checkbox"></span><span class="span1">12345</span></span>
+				</p>
+
+				<p>
+					<span class="span1">地址</span>
+					<span class="span2"><span class="span1">北京市海淀区北四环</span><span class="span2"><input class="span-check fr" type="checkbox"></span></span>
+					<span class="span3"><span class="span2"><input class="span-check" type="checkbox"></span><span class="span1">12345</span></span>
+				</p>
+				<p>
+					<span class="span1">网址</span>
+					<span class="span2"><span class="span1">www.yulipin.com</span><span class="span2"><input class="span-check fr" type="checkbox"></span></span>
+					<span class="span3"><span class="span2"><input class="span-check" type="checkbox"></span><span class="span1">12345</span></span>
+				</p>
+				<p>
+					<span class="span1">发票类型</span>
+					<span class="span2"><span class="span1">增票</span><span class="span2"><input class="span-check fr" type="checkbox"></span></span>
+					<span class="span3"><span class="span2"><input class="span-check" type="checkbox"></span><span class="span1">12345</span></span>
+				</p>
+				<p>
+					<span class="span1">税点</span>
+					<span class="span2"><span class="span1">5.00%</span><span class="span2"><input class="span-check fr" type="checkbox"></span></span>
+					<span class="span3"><span class="span2"><input class="span-check" type="checkbox"></span><span class="span1">12345</span></span>
+				</p>
+				<p class="p-con1">
+					<span class="span1">认证资料</span>
+					<span class="span2">
+						<span class="span1">营业执照</span><span class="span2"><input class="span-check fr" type="checkbox"></span>
+						<span class="span1">组织机构代码证</span><span class="span2"><input class="span-check fr" type="checkbox"></span>
+						<span class="span1">税务登记证</span><span class="span2"><input class="span-check fr" type="checkbox"></span>
+						<span class="span1">法人身份证</span><span class="span2"><input class="span-check fr" type="checkbox"></span>
+					</span>
+					<span class="span3">
+						<span class="span2"><input class="span-check" type="checkbox"></span><span class="span1">营业执照</span>
+						<span class="span2"><input class="span-check" type="checkbox"></span><span class="span1">组织机构代码证</span>
+						<span class="span2"><input class="span-check" type="checkbox"></span><span class="span1">税务登记证</span>
+						<span class="span2"><input class="span-check" type="checkbox"></span><span class="span1">法人身份证</span>
+					</span>
+				</p>
+				<p class="p-con2">
+					<span class="span1 bor-radius-bl">公司简介</span>
+					<span class="span2"><span class="span1">公司简介</span><span class="span2"><input class="span-check fr" type="checkbox"></span></span>
+					<span class="span3"><span class="span2"><input class="span-check" type="checkbox"></span><span class="span1">公司简介</span></span>
+				</p>
+			</div>
+			<div class="merge">
+				<input type="button" value="移除合并" class="merge-btn">
+			</div>
+		</div>
+	</div>
+</body>
+</html>

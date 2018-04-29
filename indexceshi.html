@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>后台主题UI框架 - 主页</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" type="text/css" href="./css/common.css" />
+    <link rel="stylesheet" type="text/css" href="./css/reset.css" />
+    <link href="./frame/style.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.js"></script>
+</head>
+
+<body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden; background:#d5dae7; ">
+    
+    <!-- 头部 -->
+    <div class="header clearfix">
+        <img src="images/logo.jpg">
+        <div class="header-right fr">
+            <span class="span1"><a href=""><img src="images/head-ico1.jpg"></a></span>
+            <span class="span2"><a href="">苏冰</a></span>
+            <span class="span3"><a href=""><img src="images/head-ico3.jpg"></a></span>
+        </div>
+    </div>
+<script type="text/javascript">
+                $(function() {
+                    var abc = [];
+                    $(".content-left-tt li.content-left-tt-li").each(function(d){
+                        if(d==0)
+                            abc[d] = 1;
+                        else
+                            abc[d] = 0;
+                    });
+                    $(".content-left-tt li.content-left-tt-li div").click(function () {
+                        thisindex = $(this).parent().index();
+                        $(this).parent().parent().find(".content-left-con").hide();
+                        if(abc[thisindex]==1){
+                            $(this).parent().find(".content-left-con").hide();
+                            abc[thisindex] = 0;
+                            var classnameold = $(this).attr('class');
+                            var classnamenew = classnameold.replace('-list-',  '-listhidden-');
+                            $(this).attr('class', classnamenew);
+                        }else{
+                            $(this).parent().find(".content-left-con").show();
+                            var classnameold = $(this).attr('class');
+                            var classnamenew = classnameold.replace('-listhidden-', '-list-');
+                            $(this).attr('class', classnamenew);
+                            abc[thisindex] = 1;
+                        }
+                        $(".content-left-tt li.content-left-tt-li div").each(function(d){
+                            if(d==thisindex)
+                                return true;
+                            var classnameold = $(this).attr('class');
+                            if (classnameold == undefined || classnameold == null || classnameold =='') {
+                                return true;
+                            };
+                            if(  classnameold.indexOf("-list-") ){
+                                var classnamenew = classnameold.replace('-list-',  '-listhidden-');
+                                $(this).attr('class', classnamenew);    
+                            }
+                        })
+                        for( i in abc ){
+                            if (i==thisindex)
+                                continue;
+                            abc[i] = 0;
+                        }
+                    })
+                    $(".content-left .content-left-tt .content-left-con li a").click(function () { 
+                        $(this).parent().siblings().removeClass("hover");
+                        $(this).parent().addClass("hover");
+                    });
+
+
+
+                })
+                $(function() {
+                    // $(".content-left .content-left-tt .content-left-con li a").click(function() {
+                    //     var x = $(this).attr("href");
+                    //     var y = $(".page-tabs a.active").attr("data-id");
+                    //     // if ( x == y ) {
+                    //         // alert("1");
+                    //         $(".page-tabs a.active").addClass("hover");
+                    //     // };
+                    // })
+                    // $(".content-left .content-left-tt .content-left-con li a").click(function() {
+                    //         var oHref = $(this).attr("href");
+                            
+                    //          $(".content-left-tt li div ").attr("class");
+                    //         // $("nav.page-tabs .page-tabs-content a").each(function() {
+                    //         //     var oDataId= $(this).attr("data-id");
+
+                    //         // })
+
+                    //         // alert(oDataId)
+
+
+                    //         // var oHref = $(this).attr("href");
+                    //         // var oDataId= $("nav.page-tabs .page-tabs-content a.active").attr("data-id");
+                    //         // $(".page-tabs .page-tabs-content a.active").each(function() {
+                    //         //      if (oHref == oDataId) {
+                    //         //          $(this).siblings().removeClass("hover");
+                    //         //          $(this).addClass("hover");
+                    //         //      };
+                    //         // })
+                       
+                    // })
+                })
+            </script>
+    <div id="wrapper">
+        <nav class="navbar-default navbar-static-side content-left" role="navigation">
+            <ul class="content-left-tt"><!-- nav nav-second-level  -->
+                <li class="content-left-tt-li" >
+                    <div class="icon-list-1">供应商</div>
+                    <ul class="content-left-con" style="display:block">
+                        <li><a class="J_menuItem" href="html/addSuppliersNew.html">添加供应商</a></li>
+                        <li><a class="J_menuItem"  href="html/vendorList1.html">供应商列表</a></li>
+                        <li><a class="J_menuItem"  href="html/MySuppliers.html">我的供应商</a></li>
+                        <li><a class="J_menuItem"  href="html/PublicSupplier.html">公共供应商</a></li>
+                        <li><a class="J_menuItem"  href="html/vendorList1.html">供应商黑名单</a></li>
+                        <li><a class="J_menuItem"  href="html/mergeSupplier.html">合并供应商</a></li>
+                        <li><a class="J_menuItem"  href="html/SupplierLabelManagement.html">供应商标签管理</a></li>
+                    </ul>   
+                </li>
+                <li class="content-left-tt-li" >
+                        <div class="icon-listhidden-2" style="">客户</div>
+                        <ul class="content-left-con">
+                            <li><a class="J_menuItem" href="html/Clientadd.html">添加客户</a></li>
+                            <li><a class="J_menuItem"  href="html/Clientlist.html">客户列表（管）</a></li>
+                        	<li><a class="J_menuItem"  href="html/addContacts.html">我的客户</a></li>
+                        	<li><a class="J_menuItem"  href="">公共客户</a></li>
+                        	<li><a class="J_menuItem"  href="html/Registered_users.html">注册用户</a></li>
+                        	<li><a class="J_menuItem"  href="html/Communicationrecord.html">沟通记录（管）</a></li>
+                        	<li><a class="J_menuItem"  href="html/CommunicationrecordMy.html">我的沟通记录</a></li>
+                        	<li><a class="J_menuItem"  href="html/Customdemandresponse.html">定制需求响应</a></li>
+                        	<li><a class="J_menuItem"  href="html/PPTdemandresponse.html">PPT需求响应</a></li>
+                        	<li><a class="J_menuItem"  href="html/Effectdiagramdemandresponse.html">效果图需求响应</a></li>
+                        	<li><a class="J_menuItem"  href="html/Samplerequirement.html">样品需求响应</a></li>
+                        </ul>
+                    </li>
+                    <li class="content-left-tt-li" >
+                        <div class="icon-listhidden-3">订单</div>
+                        <ul class="content-left-con">
+                            <li><a class="J_menuItem"  href="">订单</a></li>
+                        </ul>
+                    </li>
+                    <li class="content-left-tt-li" >
+                        <div class="icon-listhidden-4">报价</div>
+                        <ul class="content-left-con">
+                            <li><a class="J_menuItem"  href="">报价</a></li>
+                        </ul>
+                    </li>
+                    <li class="content-left-tt-li" >
+                        <div class="icon-listhidden-5">采购</div>
+                        <ul class="content-left-con">
+                            <li><a class="J_menuItem"  href="">客户</a></li>
+                        </ul>
+                    </li>
+                    <li class="content-left-tt-li" >
+                        <div class="icon-listhidden-6">产品</div>
+                        <ul class="content-left-con">
+                            <li><a class="J_menuItem"  href="html/productadd.html">添加产品</a></li>
+                            <li><a class="J_menuItem"  href="html/productlist.html">产品列表</a></li>
+                            <li><a class="J_menuItem"  href="productClassifiedmanagement.html">分类管理</a></li>
+                            <li><a class="J_menuItem"  href="html/productCategorymanagement2.html">分类属性管理</a></li>
+                            <li><a class="J_menuItem"  href="">风格标签管理</a></li>
+                        </ul>
+                    </li>
+                    <li class="content-left-tt-li" >
+                        <div class="icon-listhidden-7">案例</div>
+                        <ul class="content-left-con">
+                            <li><a class="J_menuItem"  href="html/caseManagement.html">案例管理</a></li>
+                            <li><a class="J_menuItem"  href="html/caseIndustryclassification.html">行业分类管理</a></li>
+                           <!-- <li><a class="J_menuItem"  href="">分类管理</a></li>
+                            <li><a class="J_menuItem"  href="">分类属性管理</a></li>
+                            <li><a class="J_menuItem"  href="">风格标签管理</a></li>-->
+                        </ul>
+                    </li>
+                    <li class="content-left-tt-li" >
+                        <div class="icon-listhidden-8">行业</div>
+                        <ul class="content-left-con">
+                            <li><a class="J_menuItem"  href="">案例</a></li>
+                        </ul>
+                    </li>
+                    <li class="content-left-tt-li" >
+                        <div class="icon-listhidden-9">行业</div>
+                        <ul class="content-left-con">
+                            <li><a class="J_menuItem"  href="">行业</a></li>
+                        </ul>
+                    </li>
+                    <li class="content-left-tt-li" >
+                        <div class="icon-listhidden-10">公告</div>
+                        <ul class="content-left-con">
+                            <li><a class="J_menuItem"  href="">文章</a></li>
+                        </ul>
+                    </li>
+                    <li class="content-left-tt-li" >
+                        <div class="icon-listhidden-11">活动</div>
+                        <ul class="content-left-con">
+                            <li><a class="J_menuItem"  href="">公告</a></li>
+                        </ul>
+                    </li>
+                    <li class="content-left-tt-li" >
+                        <div class="icon-listhidden-12">广告位</div>
+                        <ul class="content-left-con">
+                            <li><a class="J_menuItem"  href="">活动</a></li>
+                        </ul>
+                    </li>
+                    <li class="content-left-tt-li" >
+                        <div class="icon-listhidden-13">标签</div>
+                        <ul class="content-left-con">
+                            <li><a class="J_menuItem"  href="">广告位</a></li>
+                        </ul>
+                    </li>
+                    <li class="content-left-tt-li" >
+                        <div class="icon-listhidden-14">会员</div>
+                        <ul class="content-left-con">
+                            <li><a class="J_menuItem"  href="">标签</a></li>
+                        </ul>
+                    </li>
+                    <li class="content-left-tt-li" >
+                        <div class="icon-listhidden-15">跑分</div>
+                        <ul class="content-left-con">
+                            <li><a class="J_menuItem"  href="">会员</a></li>
+                        </ul>
+                    </li>
+                    <li class="content-left-tt-li" >
+                        <div class="icon-listhidden-16">人事</div>
+                        <ul class="content-left-con">
+                            <li><a class="J_menuItem"  href="">跑分</a></li>
+                        </ul>
+                    </li>
+                    <li class="content-left-tt-li" >
+                        <div class="icon-listhidden-17">财务</div>
+                        <ul class="content-left-con">
+                            <li><a class="J_menuItem"  href="">人事</a></li>
+                        </ul>
+                    </li>
+                    <li class="content-left-tt-li" >
+                        <div class="icon-listhidden-18">统计</div>
+                        <ul class="content-left-con">
+                            <li><a class="J_menuItem"  href="">统计</a></li>
+                        </ul>
+                    </li>
+                    <li class="content-left-tt-li" >
+                        <div class="icon-listhidden-19">权限</div>
+                        <ul class="content-left-con">
+                            <li><a class="J_menuItem"  href="">权限</a></li>
+                        </ul>
+                    </li>
+                    <li class="content-left-tt-li" >
+                        <div class="icon-listhidden-20">系统</div>
+                        <ul class="content-left-con">
+                            <li><a class="J_menuItem"  href="">系统</a></li>
+                        </ul>
+                    </li>
+            </ul>
+        </nav>
+
+        <!--左侧导航结束-->
+        <!--右侧部分开始-->
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+            <div class="row content-tabs">
+                <nav class="page-tabs J_menuTabs">
+                    <div class="page-tabs-content">
+                        <a href="javascript:;" class="active J_menuTab" data-id="html/index.html">首页</a>
+                    </div>
+                </nav>
+                <!-- <a href="login.html" class="roll-nav roll-right J_tabExit"><i class="fa fa fa-sign-out"></i> 退出</a> -->
+            </div>
+            <div class="row J_mainContent" id="content-main">
+                <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="html/index.html" frameborder="0" data-id="html/index.html" seamless></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./frame/contabs2.js"></script>
+
+
+</body>
+</html>

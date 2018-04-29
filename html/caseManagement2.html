@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>vendor List</title>
+	<link rel="stylesheet" type="text/css" href="../css/vendorList.css" />
+	<link rel="stylesheet" type="text/css" href="../layer/skin/layer.css" />
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../layer/layer.js"></script>
+</head>
+<body>
+	<div class="vendorList-wrap">
+		<div class="vendorlist-wrap-con">
+			<!-- 供应商列表标签模块 -->
+			<div class="vendorList-label clearfix">
+				<div class="vendorList-label-search clearfix">
+					<span class="span-tt fl">案例管理</span>
+					<form id="searchForm" name="searchForm" method="get" action="search">
+				                        <div class="div-search fl" style="padding-bottom: 40px">
+				                            <input name="k" type="text" id="keyword" class="InputBorder fl"  placeholder="ID\供应商名字">
+				                            <input type="submit" class="go fr" value="搜索">
+				                           <!-- <p class="fl"><a href="">玻璃杯</a><a href="">陶瓷杯</a><a href="">真空保温杯</a><a href="">玻璃杯</a><a href="">真空保温杯</a></p>-->
+				                        </div>
+				                 </form>
+				</div>
+				<!--<div class="vendorList-label-filters"><span>收起筛选</span></div>-->
+				<div class="vendorList-label-filters-con">
+					<p>
+						<span>入库状态：</span>
+						<span>
+							<select id="" name="" >
+								<option value="全部">全部</option>
+							</select>
+						</span>
+						<span>案例图：</span>
+						<span>
+							<select id="" name="" >
+								<option value="全部">全部</option>
+							</select>
+						</span>
+						<span>推荐状态：</span>
+						<select id="" name="" >
+								<option value="全部">全部</option>
+							</select>
+						
+					</p>
+					
+						<script type="text/javascript">$(function() {
+							$(".vendorList-label .vendorList-label-filters-con ul.label li").hover(function() {
+								$(this).find(".label-list-con").show();
+								$(this).addClass("hover");
+							}, function() {
+								$(this).find(".label-list-con").hide();
+								$(this).removeClass("hover");
+							});
+							$(".vendorList-label .vendorList-label-filters span").click(function() {
+								var x = $(".vendorList-label-filters-con");
+								$(".vendorList-label-filters-con").toggle();
+								if (x.is(":visible") == true) {
+									$(".vendorList-label .vendorList-label-filters span").html("收起筛选");
+									$(".vendorList-label .vendorList-label-filters span").css("background", "url(../images/filters-ico1.jpg) no-repeat 65px center");
+								} else {
+									$(".vendorList-label .vendorList-label-filters span").html("更多筛选");
+									$(".vendorList-label .vendorList-label-filters span").css("background", "url(../images/filters-ico2.jpg) no-repeat 65px center");
+								}
+							})
+							$(".all-check").click(function() {
+								$('input[name="checkname[]"]').prop("checked", this.checked);
+							});
+						
+							$(".vendorList-label-filters-con .btn_fengge").click(function() {
+								layer.open({
+									type: 2,
+									title: ['风格标签选择', 'height: 50px; line-height: 50px; padding: 0 40px 0 55px; font-size: 15px; color: #687189; background: #eef1f7 url(../images/vendorlist-ico1.jpg) no-repeat 40px center; -webkit-border-radius:5px 5px 0  0; -moz-border-radius:5px 5px 0  0; border-radius:5px 5px 0  0;'],
+									shadeClose: true,
+									shade: 0.5,
+									area: ['95.3%', '425px'],
+									content: 'detail/product/Stylelabel.html' //iframe的url
+								});
+							})
+						})</script>
+				</div>
+			</div>
+			<!-- 供应商列表模块 -->
+			<div class="productlist-label-list-top">
+				<input class="span-check all-check fl" type="checkbox">
+				<span class="fl">全选</span>
+				<a class="fl" href="javascript:;" id="tag-area">批量取消推荐</a>
+				<script type="text/javascript">$(function() {
+	$(".vendorList-label-list-top #tag-batch").click(function() {
+		layer.open({
+			type: 2,
+			title: ['标签批量添加', 'height: 50px; line-height: 50px; padding: 0 40px 0 55px; font-size: 15px; color: #687189; background: #eef1f7 url(../images/vendorlist-ico1.jpg) no-repeat 40px center; -webkit-border-radius:5px 5px 0  0; -moz-border-radius:5px 5px 0  0; border-radius:5px 5px 0  0;'],
+			shadeClose: true,
+			shade: 0.5,
+			area: ['95.3%', '425px'],
+			content: '../html/addSuppliersBatch.html' //iframe的url
+		});
+	})
+	$(".vendorList-label-list-top #layer-area").click(function() {
+		layer.open({
+			type: 2,
+			title: ['添加供应商', 'height: 50px; line-height: 50px; padding: 0 40px 0 55px; font-size: 15px; color: #687189; background: #eef1f7 url(../images/vendorlist-ico1.jpg) no-repeat 40px center; -webkit-border-radius:5px 5px 0  0; -moz-border-radius:5px 5px 0  0; border-radius:5px 5px 0  0;'],
+			shadeClose: true,
+			shade: 0.5,
+			area: ['95.3%', '745px'],
+			content: '../html/addSuppliers.html' //iframe的url
+		});
+	})
+})</script>
+
+			</div>
+			<div class="casemanage2-label-list" style="padding-bottom: 50px;">
+				<div class="hd">
+					<span class="span1">订单ID</span>
+					<span class="span2">客户名称</span>
+					<span class="span4">销售</span>
+					<span class="span1">产品货号</span>
+					<span class="span4">产品图</span>
+					<span class="span3">大货</span>
+					<span class="span4">入库</span>
+					<span class="span4">入库数量</span>
+					<span class="span3">案例图</span>
+					<span class="span2">备注</span>
+					<span class="span4">推荐状态</span>
+					<span class="span1">操作</span>
+					
+				</div>
+				<div class="bd" id="bdlist">
+					<ul>
+						<li class="span1"><input class="span-check fl" type="checkbox" name='checkname[]'><span class="span-cent blue">1231</span></li>
+						<li class="span2"><span class="span-cent blue"><a href="productlist2.html">公司名称公司名称公司名称</a></span></li>
+						<li class="span4"><span class="span-cent">陈天明</span></li>
+						<li class="span1 fixed"><dl><dd>A456125</dd>		</dl></li>		
+						<li class="span4 fixed"><dl><dd><img src="../pro-img.jpg" width="50" height="50"></dd>	</dl>	</li>
+						<li class="span3 fixed"><dl>	<dd>有</dd>		</dl></li>
+						<li class="span4 fixed"><dl><dd>A456125</dd>		</dl></li>
+						<li class="span4 fixed"><dl><dd>A456125</dd>		</dl></li>
+						<li class="span3 fixed"><dl><dd>A456125</dd>		</dl></li>
+						<li class="span2 fixed"><dl><dd>A456125</dd>		</dl></li>
+						<li class="span4 fixed"><dl><dd>A456125</dd>		</dl></li>
+						<li class="span1 fixed"><dl><dd><a>备注</a><a>取消</a></dd>		</dl></li>		
+						
+
+					</ul>
+					<ul>
+						<li class="span1"><input class="span-check fl" type="checkbox" name='checkname[]'><span class="span-cent blue">1231</span></li>
+						<li class="span2"><span class="span-cent blue"><a href="productlist2.html">公司名称公司名称公司名称</a></span></li>
+						<li class="span4"><span class="span-cent">陈天明</span></li>
+						<li class="span1 fixed"><dl><dd>A456125</dd>	<dd>A456125</dd>	</dl></li>		
+						<li class="span4 fixed"><dl><dd><img src="../pro-img.jpg" width="50" height="50"></dd>	<dd><img src="../pro-img.jpg" width="50" height="50"></dd></dl>	</li>
+						<li class="span3 fixed"><dl>	<dd>有</dd>	<dd>wu</dd>		</dl></li>
+						<li class="span4 fixed"><dl><dd>A456125</dd>	<dd>A456125</dd>	</dl></li>
+						<li class="span4 fixed"><dl><dd>A456125</dd>	<dd>A456125</dd>	</dl></li>
+						<li class="span3 fixed"><dl><dd>A456125</dd>	<dd>A456125</dd>	</dl></li>
+						<li class="span2 fixed"><dl><dd>A456125</dd>	<dd>A456125</dd>	</dl></li>
+						<li class="span4 fixed"><dl><dd>A456125</dd>	<dd>A456125</dd>	</dl></li>
+						<li class="span1 fixed"><dl><dd><a>备注</a><a>取消</a></dd>	<dd><a>备注</a><a>取消</a></dd>	</dl></li>		
+						
+
+					</ul>
+					
+					<script type="text/javascript">
+						$(document).ready(function(){
+							var  esd=$("#bdlist ul");
+						for(var j=0;j<esd.length;j++){
+							var maxheight = 0;
+						        for(var i = 0;i<$("li").length;i++){
+						            if(maxheight <= $("#bdlist ul").eq(j).find("li").eq(i).height()){
+						                maxheight = $("#bdlist ul").eq(j).find("li").eq(i).height();
+						            }
+						        }
+						        $("#bdlist ul").eq(j).find('li').css('height',parseInt(maxheight)+'px');
+							}	
+						 
+						})
+
+
+					</script>
+				
+				</div>
+			</div>
+			<!--<div class="pag">
+				<p>
+					<span><a href="">&lt;</a></span>
+					<span><a href="">首页</a></span>
+					<span><a href="">上一页</a></span>
+					<span><i>1</i> / 5</span>
+					<span><a href="">下一页</a></span>
+					<span><a href="">末页</a></span>
+					<span><a href="">&gt;</a></span>
+				</p>
+			</div>-->
+		</div>
+	</div>
+</body>
+</html>

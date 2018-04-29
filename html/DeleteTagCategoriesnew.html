@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../css/vendorList.css" />
+	<link rel="stylesheet" type="text/css" href="../layer/skin/layer.css" />
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<script type="text/javascript" src="../layer/layer.js"></script>
+</head>
+<body>
+	<div class="AddTagCategories-con">
+		<div class="div-label div-con1">
+			<p class="padd-b30">已有分类：</p>
+			<p>
+				<span class="span-list">
+					<span><input  type="radio" name="x" class="span-ipt-rad"></span>
+					<span>数码家电</span>
+				</span>
+				<span class="span-list">
+					<span><input  type="radio" name="x" class="span-ipt-rad"></span>
+					<span>数码家电</span>
+				</span>
+				<span class="span-list">
+					<span><input  type="radio" name="x" class="span-ipt-rad"></span>
+					<span>数码家电</span>
+				</span>
+			</p>
+			<div class="div-btn">
+				<p><input type="button" class="cancel" value="取消" /><input type="button" class="save" value="删除"></p>
+			</div>
+		</div>
+
+		<div class="div-label div-con2" style="display:none;">
+			<p class="p-delete">你是否确定要删除此标签？</p>
+			<div class="div-btn">
+				<p><input type="button" class="cancel1" value="取消" /><input type="submit" value="确定" class="save1" /></p>
+			</div>
+		</div>
+
+		
+	</div>
+	<script type="text/javascript">
+		$(function() {
+			$("input.save").click(function() {
+				$(".div-con1").hide();
+				$(".div-con2").show();
+			})
+			$("input.cancel1").click(function() {
+				$(".div-con1").show();
+				$(".div-con2").hide();
+			})
+		})
+	</script>
+</body>
+</html>

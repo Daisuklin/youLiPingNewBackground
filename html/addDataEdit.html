@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>编辑认证资料</title>
+	<link rel="stylesheet" type="text/css" href="../css/vendorList.css" />
+	<link rel="stylesheet" type="text/css" href="../layer/skin/layer.css" />
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../layer/layer.js"></script>
+</head>
+<body>
+	<!-- 添加供应商 -->
+	<div class="editData-con">
+		<div class="div-editData">
+
+			<p class="p-con1">
+				<span>
+					<span class="span-txt2">营业执照：</span>
+					<input class="file-ipt" id="fileipt3" type="file">
+					<span class="span-ipt" onclick="$('input[id=fileipt3]').click();">选择图片……</span>
+					<span><input id="photoCover3" class="input-large5" type="text"></span>
+					<span class="span-delete">删除图片</span>
+				</span>
+
+				<span>
+					<span class="span-txt2">税务登记证：</span>
+					<input class="file-ipt" id="fileipt4" type="file">
+					<span class="span-ipt" onclick="$('input[id=fileipt4]').click();">选择图片……</span>
+					<span><input id="photoCover4" class="input-large6" type="text"></span>
+					<span class="span-delete">删除图片</span>
+				</span>
+
+				<span>
+					<span class="span-txt2">法人身份证：</span>
+					<input class="file-ipt" id="fileipt5" type="file">
+					<span class="span-ipt" onclick="$('input[id=fileipt5]').click();">选择图片……</span>
+					<span><input id="photoCover5" class="input-large5" type="text"></span>
+					<span class="span-delete">删除图片</span>
+				</span>
+
+				<span>
+					<span class="span-txt2">组织机构代码证：</span>
+					<input class="file-ipt" id="fileipt6" type="file">
+					<span class="span-ipt" onclick="$('input[id=fileipt6]').click();">选择图片……</span>
+					<span><input id="photoCover6" class="input-large6" type="text"></span>
+					<span class="span-delete">删除图片</span>
+				</span>
+			</p>
+			<!-- <p>
+				<span class="span-txt">营业执照：已上传</span>
+					<input class="file-ipt" id="fileipt1" type="file">
+					<span class="span-ipt" onclick="$('input[id=fileipt1]').click();">选择图片……</span>
+					<span><input id="photoCover1" class="input-large1" type="text"></span>
+				<span class="span-txt1">税务登记证：无</span>
+					<input class="file-ipt" id="fileipt2" type="file">
+					<span class="span-ipt" onclick="$('input[id=fileipt2]').click();">选择图片……</span>
+					<span><input id="photoCover2" class="input-large2" type="text"></span>
+				<span class="span-txt3">法人名称：</span><span><input type="text" class="legal-name" /></span>
+			</p> -->
+			<p class="p-con1">
+				<span class="span-txt3">法人名称：</span><span><input type="text" class="legal-name" /></span>
+				<span class="span-txt3">法人手机号：</span><span><input type="text" class="legal-name" /></span>
+			</p>
+			<p class="p-con">
+				<span>
+					<span class="span-txt2">资料图片A：</span>
+					<input class="file-ipt" id="fileipt7" type="file">
+					<span class="span-ipt" onclick="$('input[id=fileipt7]').click();">选择图片……</span>
+					<span><input id="photoCover7" class="input-large5" type="text"></span>
+					<span class="span-delete">删除图片</span>
+				</span>
+				<span>
+					<span class="span-txt2">资料图片B：</span>
+					<input class="file-ipt" id="fileipt8" type="file">
+					<span class="span-ipt" onclick="$('input[id=fileipt8]').click();">选择图片……</span>
+					<span><input id="photoCover8" class="input-large6" type="text"></span>
+					<span class="span-delete">删除图片</span>
+				</span>
+			</p>
+		</div>
+		<div class="div-btn">
+			<p><input type="button" class="cancel" value="取消" /><input type="submit" value="保存" class="save" /></p>
+		</div>
+		<script type="text/javascript">
+			$(function() {
+				$('input[id=fileipt1]').change(function() {
+					$('#photoCover1').val($(this).val());
+				});
+				$('input[id=fileipt2]').change(function() {
+					$('#photoCover2').val($(this).val());
+				});
+				$('input[id=fileipt3]').change(function() {
+					$('#photoCover3').val($(this).val());
+				});
+				$('input[id=fileipt4]').change(function() {
+					$('#photoCover4').val($(this).val());
+				});
+				$('input[id=fileipt5]').change(function() {
+					$('#photoCover5').val($(this).val());
+				});
+				$('input[id=fileipt6]').change(function() {
+					$('#photoCover6').val($(this).val());
+				});
+				$('input[id=fileipt7]').change(function() {
+					$('#photoCover7').val($(this).val());
+				});
+				$('input[id=fileipt8]').change(function() {
+					$('#photoCover8').val($(this).val());
+				});
+			})
+		</script>
+	</div>
+</body>
+</html>

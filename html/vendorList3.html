@@ -1,0 +1,530 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>vendor List</title>
+	<link rel="stylesheet" type="text/css" href="../css/vendorList.css" />
+	<link rel="stylesheet" type="text/css" href="../layer/skin/layer.css" />
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../layer/layer.js"></script>
+	<script type="text/javascript" src="../layer/extend/layer.ext.js"></script>
+</head>
+<body>
+	<div class="vendorList-wrap">
+		<div class="vendorlist-wrap-con">
+			<!-- 公司姓名模块 -->
+			<div class="vendorList-company-name">
+				<p>
+					<span>北京东方锐阳科技发展有限责任公司</span>
+					<span><em>星级：</em><i>5</i></span>
+				</p>
+				<p>
+					<span>ID：12345</span>
+					<span>创建时间：2015-01-01</span>
+					<span>创建人：陈天明</span>
+					<span>跟进人：陈天明</span>
+				</p>
+				<a class="pullblack-ico2" href="javascript:;">放弃跟进</a>
+				<a class="pullblack-ico1" href="javascript:;">放入黑名单</a>
+			</div>
+			<!-- 基本信息 -->
+			<div class="vendorList-company-info">
+				<div class="hd">基本信息<i class="fr"><a href="javascript:;"><img src="../images/vendorlist-ico2.jpg"></a></i></div>
+				<div class="bd">
+					<p>
+						<span class="span1">成立时间：2010年</span>
+						<span class="span2">经营模式：厂家</span>
+						<span class="span3">标签：移动电源</span>
+					</p>
+					<p>
+						<span class="span1">发票类型：增票</span>
+						<span class="span2">税点：5.00%</span>
+						<span class="span3">网址：http://www.freesun.com.cn/</span>
+					</p>
+					<p>
+						<span class="span1">所在地区：北京市</span>
+						<span class="span4">地址：北京市海淀区中关村大街18号科贸中心写字楼1810室</span>
+					</p>
+				</div>
+			</div>
+			<!-- 公司简介 -->
+			<div class="vendorList-company-about">
+				<div class="hd">公司简介<i class="fr edit"><a href="javascript:;"><img src="../images/vendorlist-ico2.jpg"></a></i><i class="fr look"><a href="javascript:;"><img src="../images/vendorlist-ico3.jpg"></a></i></div>
+				<div class="bd">
+					<p>
+						公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介
+	公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介
+	公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介
+	公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介公司简介
+					</p>
+				</div>
+			</div>
+			<!-- 联系人 -->
+			<div class="vendorList-company-contacts">
+				<div class="hd">联系人<i class="fr"><a class="layer-area" href="javascript:;"><img src="../images/vendorlist-ico4.jpg"></a></i></div>
+				<script type="text/javascript">
+					$(function() {
+						$(".vendorList-company-info .hd i.fr").click(function() {
+							layer.open({
+							    type: 2,
+							    title: ['编辑客户信息','height: 50px; line-height: 50px; padding: 0 40px 0 55px; font-size: 15px; color: #687189; background: #eef1f7 url(../images/vendorlist-ico1.jpg) no-repeat 40px center; -webkit-border-radius:5px 5px 0  0; -moz-border-radius:5px 5px 0  0; border-radius:5px 5px 0  0;'],
+							    shadeClose: true,
+							    shade: 0.5,
+							    area: ['95.3%', '745px'],
+							    content: '../html/editSuppliers.html' //iframe的url
+							}); 
+						})
+						$(".vendorList-company-name .pullblack-ico1").click(function() {
+							layer.open({
+							    type: 2,
+							    title: ['拉黑供应商','height: 50px; line-height: 50px; padding: 0 40px 0 55px; font-size: 15px; color: #687189; background: #eef1f7 url(../images/vendorlist-ico1.jpg) no-repeat 40px center; -webkit-border-radius:5px 5px 0  0; -moz-border-radius:5px 5px 0  0; border-radius:5px 5px 0  0;'],
+							    shadeClose: true,
+							    shade: 0.5,
+							    area: ['95.3%', '345px'],
+							    content: '../html/pullBlack.html' //iframe的url
+							}); 
+						})
+						$(".vendorList-company-prove i .data-edit-ico").click(function() {
+							layer.open({
+							    type: 2,
+							    title: ['编辑认证资料','height: 50px; line-height: 50px; padding: 0 40px 0 55px; font-size: 15px; color: #687189; background: #eef1f7 url(../images/vendorlist-ico1.jpg) no-repeat 40px center; -webkit-border-radius:5px 5px 0  0; -moz-border-radius:5px 5px 0  0; border-radius:5px 5px 0  0;'],
+							    shadeClose: true,
+							    shade: 0.5,
+							    area: ['95.3%', '425px'],
+							    content: '../html/addDataEdit.html' //iframe的url
+							}); 
+						})
+						$(".vendorList-company-prove i .data-ico").click(function() {
+							layer.open({
+							    type: 2,
+							    title: ['添加认证资料','height: 50px; line-height: 50px; padding: 0 40px 0 55px; font-size: 15px; color: #687189; background: #eef1f7 url(../images/vendorlist-ico1.jpg) no-repeat 40px center; -webkit-border-radius:5px 5px 0  0; -moz-border-radius:5px 5px 0  0; border-radius:5px 5px 0  0;'],
+							    shadeClose: true,
+							    shade: 0.5,
+							    area: ['95.3%', '230px'],
+							    content: '../html/addDate.html' //iframe的url
+							}); 
+						})
+						$(".vendorList-company-pictures i .company-ico").click(function() {
+							layer.open({
+							    type: 2,
+							    title: ['添加公司图片','height: 50px; line-height: 50px; padding: 0 40px 0 55px; font-size: 15px; color: #687189; background: #eef1f7 url(../images/vendorlist-ico1.jpg) no-repeat 40px center; -webkit-border-radius:5px 5px 0  0; -moz-border-radius:5px 5px 0  0; border-radius:5px 5px 0  0;'],
+							    shadeClose: true,
+							    shade: 0.5,
+							    area: ['95.3%', '230px'],
+							    content: '../html/addCompany.html' //iframe的url
+							}); 
+						})
+						$(".vendorList-company-pictures i .lookcompany-ico").click(function() {
+							layer.open({
+							    type: 2,
+							    title: ['编辑公司图片','height: 50px; line-height: 50px; padding: 0 40px 0 55px; font-size: 15px; color: #687189; background: #eef1f7 url(../images/vendorlist-ico1.jpg) no-repeat 40px center; -webkit-border-radius:5px 5px 0  0; -moz-border-radius:5px 5px 0  0; border-radius:5px 5px 0  0;'],
+							    shadeClose: true,
+							    shade: 0.5,
+							    area: ['95.3%', '280px'],
+							    content: '../html/editCredentials.html' //iframe的url
+							}); 
+						})
+						$(".vendorList-company-about .hd i.edit").click(function() {
+							layer.open({
+							    type: 2,
+							    title: ['编辑公司简介','height: 50px; line-height: 50px; padding: 0 40px 0 55px; font-size: 15px; color: #687189; background: #eef1f7 url(../images/vendorlist-ico1.jpg) no-repeat 40px center; -webkit-border-radius:5px 5px 0  0; -moz-border-radius:5px 5px 0  0; border-radius:5px 5px 0  0;'],
+							    shadeClose: true,
+							    shade: 0.5,
+							    area: ['95.3%', '350px'],
+							    content: '../html/editCompanyProfile.html' //iframe的url
+							}); 
+						})
+						$(".vendorList-company-about .hd i.look").click(function() {
+							layer.open({
+							    type: 2,
+							    title: ['查看公司简介','height: 50px; line-height: 50px; padding: 0 40px 0 55px; font-size: 15px; color: #687189; background: #eef1f7 url(../images/vendorlist-ico1.jpg) no-repeat 40px center; -webkit-border-radius:5px 5px 0  0; -moz-border-radius:5px 5px 0  0; border-radius:5px 5px 0  0;'],
+							    shadeClose: true,
+							    shade: 0.5,
+							    area: ['95.3%', '300px'],
+							    content: '../html/lookCompanyProfile.html' //iframe的url
+							}); 
+						})
+						$(".vendorList-company-recor i .recor-ico").click(function() {
+							layer.open({
+							    type: 2,
+							    title: ['添加沟通记录','height: 50px; line-height: 50px; padding: 0 40px 0 55px; font-size: 15px; color: #687189; background: #eef1f7 url(../images/vendorlist-ico1.jpg) no-repeat 40px center; -webkit-border-radius:5px 5px 0  0; -moz-border-radius:5px 5px 0  0; border-radius:5px 5px 0  0;'],
+							    shadeClose: true,
+							    shade: 0.5,
+							    area: ['95.3%', '370px'],
+							    content: '../html/addRecording.html' //iframe的url
+							}); 
+						})
+						$(".vendorList-company-recor i .lookrecor-ico").click(function() {
+							layer.open({
+							    type: 2,
+							    title: ['查看沟通记录','height: 50px; line-height: 50px; padding: 0 40px 0 55px; font-size: 15px; color: #687189; background: #eef1f7 url(../images/vendorlist-ico1.jpg) no-repeat 40px center; -webkit-border-radius:5px 5px 0  0; -moz-border-radius:5px 5px 0  0; border-radius:5px 5px 0  0;'],
+							    shadeClose: true,
+							    shade: 0.5,
+							    area: ['95.3%', '300px'],
+							    content: '../html/lookCommunicationrecord.html' //iframe的url
+							}); 
+						})
+						$(".vendorList-company-contacts .layer-area").click(function() {
+							layer.open({
+							    type: 2,
+							    title: ['添加联系人','height: 50px; line-height: 50px; padding: 0 40px 0 55px; font-size: 15px; color: #687189; background: #eef1f7 url(../images/vendorlist-ico1.jpg) no-repeat 40px center; -webkit-border-radius:5px 5px 0  0; -moz-border-radius:5px 5px 0  0; border-radius:5px 5px 0  0;'],
+							    shadeClose: true,
+							    shade: 0.5,
+							    area: ['95.3%', '350px'],
+							    content: '../html/addContacts.html' //iframe的url
+							}); 
+						})
+						$(".vendorList-company-contacts .bd-list-delete").click(function() {
+							layer.open({
+							    type: 2,
+							    title: ['删除联系人','height: 50px; line-height: 50px; padding: 0 40px 0 55px; font-size: 15px; color: #687189; background: #eef1f7 url(../images/vendorlist-ico1.jpg) no-repeat 40px center; -webkit-border-radius:5px 5px 0  0; -moz-border-radius:5px 5px 0  0; border-radius:5px 5px 0  0;'],
+							    shadeClose: true,
+							    shade: 0.5,
+							    area: ['95.3%', '285px'],
+							    content: '../html/DeleteContacts.html' //iframe的url
+							}); 
+						})
+						$(".vendorList-company-contacts .bd-list-edit").click(function() {
+							layer.open({
+							    type: 2,
+							    title: ['编辑联系人','height: 50px; line-height: 50px; padding: 0 40px 0 55px; font-size: 15px; color: #687189; background: #eef1f7 url(../images/vendorlist-ico1.jpg) no-repeat 40px center; -webkit-border-radius:5px 5px 0  0; -moz-border-radius:5px 5px 0  0; border-radius:5px 5px 0  0;'],
+							    shadeClose: true,
+							    shade: 0.5,
+							    area: ['95.3%', '350px'],
+							    content: '../html/editContacts.html' //iframe的url
+							}); 
+						})
+						$(".vendorList-company-pro-on .hd i.delete").click(function() {
+							layer.open({
+							    type: 2,
+							    title: ['删除产品','height: 50px; line-height: 50px; padding: 0 40px 0 55px; font-size: 15px; color: #687189; background: #eef1f7 url(../images/vendorlist-ico1.jpg) no-repeat 40px center; -webkit-border-radius:5px 5px 0  0; -moz-border-radius:5px 5px 0  0; border-radius:5px 5px 0  0;'],
+							    shadeClose: true,
+							    shade: 0.5,
+							    area: ['95.3%', '285px'],
+							    content: '../html/DeleteProductList.html' //iframe的url
+							}); 
+						})
+						$(".vendorList-company-pro-off .hd i.delete").click(function() {
+							layer.open({
+							    type: 2,
+							    title: ['删除产品','height: 50px; line-height: 50px; padding: 0 40px 0 55px; font-size: 15px; color: #687189; background: #eef1f7 url(../images/vendorlist-ico1.jpg) no-repeat 40px center; -webkit-border-radius:5px 5px 0  0; -moz-border-radius:5px 5px 0  0; border-radius:5px 5px 0  0;'],
+							    shadeClose: true,
+							    shade: 0.5,
+							    area: ['95.3%', '285px'],
+							    content: '../html/DeleteProductList.html' //iframe的url
+							}); 
+						})
+						$(".vendorList-company-recor p a").click(function() {
+							var x = $(this).attr("data-imgsrc");
+						                layer.open({
+						                    type: 1,
+						                    title: false,
+						                    closeBtn: 1,
+						                    area: ['95.3%', '95%'],
+						                    skin: 'layui-layer-nobg',
+						                    shadeClose: true,
+						                    content: '<span><img class="record-img" style="max-width: 100%; max-height: 100%;" src="'+x+'"></span>'
+						            });
+						                // display:table-cell; vertical-align:middle;垂直居中span加此属性；
+						})
+						$(".vendorList-company-pro-on .hd i.open").click(function() {
+							var x = $(".vendorList-company-pro-on .bd").height();
+							if( x==183 ) {
+								$(".vendorList-company-pro-on .bd").css("height","auto");
+							}else {
+								$(".vendorList-company-pro-on .bd").css("height","183px");
+							}
+						})
+						$(".vendorList-company-pro-off .hd i.open").click(function() {
+							var x = $(".vendorList-company-pro-off .bd").height();
+							if( x==183 ) {
+								$(".vendorList-company-pro-off .bd").css("height","auto");
+							}else {
+								$(".vendorList-company-pro-off .bd").css("height","183px");
+							}
+						})
+					})
+					
+
+				</script>
+				<div class="bd">
+					<div class="bd-list">
+						<p>
+							<span class="span1">联系人：陈小明</span>
+							<span class="span2">电话：010-12345678</span>
+							<span class="span2">手机：15801301300</span>
+							<span class="span2">微信：15801301300</span>
+						</p>
+						<p>
+							<span class="span1">QQ：0123456789</span>
+							<span class="span2">传真：无</span>
+							<span class="span2">邮件：无</span>
+						</p>
+						<span class="bd-list-time">添加时间：2015-01-01</span>
+						<span class="bd-list-delete"><a href="javascript:;"><img src="../images/vendorlist-ico7.png"></a></span>
+						<span class="bd-list-edit"><a href="javascript:;"><img src="../images/vendorlist-ico2.jpg"></a></span>
+					</div>
+					<div class="bd-list bor-b-n">
+						<p>
+							<span class="span1">联系人：陈小明</span>
+							<span class="span2">电话：010-12345678</span>
+							<span class="span2">手机：15801301300</span>
+							<span class="span2">微信：15801301300</span>
+						</p>
+						<p>
+							<span class="span1">QQ：0123456789</span>
+							<span class="span2">传真：无</span>
+							<span class="span2">邮件：无</span>
+						</p>
+						<span class="bd-list-time">添加时间：2015-01-01</span>
+						<span class="bd-list-delete"><a href="javascript:;"><img src="../images/vendorlist-ico7.png"></a></span>
+						<span class="bd-list-edit"><a href="javascript:;"><img src="../images/vendorlist-ico2.jpg"></a></span>
+					</div>
+				</div>
+			</div>
+			<!-- 公司简介 -->
+			<div class="vendorList-company-recor">
+				<div class="hd">沟通记录<i class="fr"><a href="javascript:;" class="recor-ico"><img src="../images/vendorlist-ico4.jpg"></a></i><i class="fr"><a class="lookrecor-ico" href="javascript:;"><img src="../images/vendorlist-ico3.jpg"></a></i></div>
+				<div class="bd">
+					<p>
+			                            鼠标报价35元，并寄样品  <a href="javascript:void(0)" data-imgsrc="http://youlipinpic.b0.upaiyun.com/upload/company/2015_08_06/1525248809.jpg">1520059389.jpg</a> ［2012-08-24 07:57:26］
+			                        </p>
+			                                            <p>
+			                            客户不确定什么时候使用，等待领导批示。推荐品牌一键上网鼠标。  <a href="javascript:void(0)" data-imgsrc="http://www.qqwangming.org/uploads/allimg/c150504/1430EH1GF-3231U.jpg">1520059389.jpg</a> ［2012-08-24 07:58:06］
+			                        </p>
+			                                            <p>
+			                            客户说年内可能不会采购。感觉需求莫须有，便请他寄回样品。  <a href="javascript:void(0)" data-imgsrc="http://www.qqwangming.org/uploads/allimg/131020/0130431106-2.jpg">1520059389.jpg</a> ［2012-08-24 07:59:14］
+			                        </p>
+			                                            <p>
+			                            还有十几个无纺布袋和签字笔笔芯待寄，地址寄送钱确认。  <a href="javascript:void(0)" data-imgsrc="http://www.qqwangming.org/uploads/allimg/131020/0130431106-3.jpg">1520059389.jpg</a> ［2012-08-30 02:01:05］
+			                        </p>
+			                                            <p>
+			                            无纺布袋和笔芯已经寄了。  <a href="javascript:void(0)" data-imgsrc=""></a> ［2012-09-24 01:13:39］
+			                        </p>
+
+				</div>
+				<!-- <div id="layer-photos-demo" class="layer-photos-demo" style="display:none;">
+				    <img layer-pid="图片id，可以不写" layer-src="大图地址" src="缩略图" alt="图片名">
+				    <img layer-pid="图片id，可以不写" layer-src="大图地址" src="缩略图" alt="图片名">
+				</div> -->
+			</div>
+
+			<!-- 报价信息 -->
+			<div class="vendorList-company-recor">
+				<div class="hd">报价信息<i class="fr"><a href=""><img src="../images/vendorlist-ico3.jpg"></a></i></div>
+				<div class="bd">
+					<p>报价信息</p>
+				</div>
+			</div>
+			<!-- 订单信息 -->
+			<div class="vendorList-company-recor">
+				<div class="hd">订单信息<i class="fr"><a href=""><img src="../images/vendorlist-ico3.jpg"></a></i></div>
+				<div class="bd">
+					<p>订单信息</p>
+				</div>
+			</div>
+			<!-- 认证资料 -->
+			<div class="vendorList-company-prove">
+				<div class="hd">认证资料<i class="fr"><a class="data-edit-ico" href="javascript:;"><img src="../images/vendorlist-ico2.jpg"></a></i><i class="fr"><a class="data-ico" href="javascript:;"><img src="../images/vendorlist-ico4.jpg"></a></i></div>
+				<div class="bd">
+					<ul>
+						<li><img src="../images/prove-img.jpg" width="150" height="100"><p>营业执照</p></li>
+						<li><img src="../images/prove-img.jpg" width="150" height="100"><p>营业执照</p></li>
+						<li><img src="../images/prove-img.jpg" width="150" height="100"><p>营业执照</p></li>
+						<li><img src="../images/prove-img.jpg" width="150" height="100"><p>营业执照</p></li>
+						<li><img src="../images/prove-img.jpg" width="150" height="100"><p>营业执照</p></li>
+						<li><img src="../images/prove-img.jpg" width="150" height="100"><p>营业执照</p></li>
+						<li><img src="../images/prove-img.jpg" width="150" height="100"><p>营业执照</p></li>
+						<li><img src="../images/prove-img.jpg" width="150" height="100"><p>营业执照</p></li>
+						<li><img src="../images/prove-img.jpg" width="150" height="100"><p>营业执照</p></li>
+						<li><img src="../images/prove-img.jpg" width="150" height="100"><p>营业执照</p></li>
+					</ul>
+					<div class="">
+						<p>法人名称：无</p>
+						<p>法人手机号：无</p>
+					</div>
+				</div>
+			</div>
+			<!-- 认证资料 -->
+			<div class="vendorList-company-pictures">
+				<div class="hd">公司图片<i class="fr"><a class="lookcompany-ico" href="javascript:;"><img src="../images/vendorlist-ico2.jpg"></a></i><i class="fr"><a class="company-ico" href="javascript:;"><img src="../images/vendorlist-ico4.jpg"></a></i></div>
+				<div class="bd">
+					<ul>
+						<li><img src="../images/prove-img.jpg" width="150" height="100"><p>图片说明</p></li>
+						<li><img src="../images/prove-img.jpg" width="150" height="100"><p>图片说明</p></li>
+						<li><img src="../images/prove-img.jpg" width="150" height="100"><p>图片说明</p></li>
+						<li><img src="../images/prove-img.jpg" width="150" height="100"><p>图片说明</p></li>
+						<li><img src="../images/prove-img.jpg" width="150" height="100"><p>图片说明</p></li>
+					</ul>
+				</div>
+			</div>
+			<!-- 产品列表：在线产品 -->
+			<div class="vendorList-company-pro-on">
+				<div class="hd">产品列表：在线产品<i class="fr open"><a href="javascript:;"><img src="../images/vendorlist-ico5.jpg"></a></i><i class="fr delete"><a href="javascript:;"><img src="../images/vendorlist-ico8.png"></a></i></div>
+				<div class="bd">
+					<p class="p-tt">
+						<span class="span1">图片</span>
+						<span class="span1">货号</span>
+						<span class="span1">成本</span>
+						<span class="span1">售价</span>
+						<span class="span1">厂家型号</span>
+						<span class="span2">名称</span>
+						<span class="span1">最近报价</span>
+						<span class="span1">最近订单价</span>
+						<span class="span1">操作</span>
+					</p>
+						<p class="p-list">
+							<span class="span1"><img src="../pro-img.jpg" width="40" height="40"></span>
+							<span class="span1 blue">100.00</span>
+							<span class="span1">200.00</span>
+							<span class="span1">200.00</span>
+							<span class="span1">SD-620019</span>
+							<span class="span2">舜迪尔特家用工具19件套定制</span>
+							<span class="span1">200.00</span>
+							<span class="span1">200.00</span>
+							<span class="span1"><a href="">停产</a><a class="pl-10" href="">断开关联</a></span>
+						</p>
+						<p class="p-list">
+							<span class="span1"><img src="../pro-img.jpg" width="40" height="40"></span>
+							<span class="span1 blue">100.00</span>
+							<span class="span1">200.00</span>
+							<span class="span1">200.00</span>
+							<span class="span1">SD-620019</span>
+							<span class="span2">舜迪尔特家用工具19件套定制</span>
+							<span class="span1">200.00</span>
+							<span class="span1">200.00</span>
+							<span class="span1"><a href="">停产</a><a class="pl-10" href="">断开关联</a></span>
+						</p>
+						<p class="p-list">
+							<span class="span1"><img src="../pro-img.jpg" width="40" height="40"></span>
+							<span class="span1 blue">100.00</span>
+							<span class="span1">200.00</span>
+							<span class="span1">200.00</span>
+							<span class="span1">SD-620019</span>
+							<span class="span2">舜迪尔特家用工具19件套定制</span>
+							<span class="span1">200.00</span>
+							<span class="span1">200.00</span>
+							<span class="span1"><a href="">停产</a><a class="pl-10" href="">断开关联</a></span>
+						</p>
+						<p class="p-list">
+							<span class="span1"><img src="../pro-img.jpg" width="40" height="40"></span>
+							<span class="span1 blue">100.00</span>
+							<span class="span1">200.00</span>
+							<span class="span1">200.00</span>
+							<span class="span1">SD-620019</span>
+							<span class="span2">舜迪尔特家用工具19件套定制</span>
+							<span class="span1">200.00</span>
+							<span class="span1">200.00</span>
+							<span class="span1"><a href="">停产</a><a class="pl-10" href="">断开关联</a></span>
+						</p>
+						<p class="p-list">
+							<span class="span1"><img src="../pro-img.jpg" width="40" height="40"></span>
+							<span class="span1 blue">100.00</span>
+							<span class="span1">200.00</span>
+							<span class="span1">200.00</span>
+							<span class="span1">SD-620019</span>
+							<span class="span2">舜迪尔特家用工具19件套定制</span>
+							<span class="span1">200.00</span>
+							<span class="span1">200.00</span>
+							<span class="span1"><a href="">停产</a><a class="pl-10" href="">断开关联</a></span>
+						</p>
+						<p class="p-list">
+							<span class="span1"><img src="../pro-img.jpg" width="40" height="40"></span>
+							<span class="span1 blue">100.00</span>
+							<span class="span1">200.00</span>
+							<span class="span1">200.00</span>
+							<span class="span1">SD-620019</span>
+							<span class="span2">舜迪尔特家用工具19件套定制</span>
+							<span class="span1">200.00</span>
+							<span class="span1">200.00</span>
+							<span class="span1"><a href="">停产</a><a class="pl-10" href="">断开关联</a></span>
+						</p>
+				</div>
+			</div>
+			<!-- 产品列表：离线产品 -->
+			<div class="vendorList-company-pro-off">
+				<div class="hd">产品列表：离线产品<i class="fr open"><a href="javascript:;"><img src="../images/vendorlist-ico5.jpg"></a></i><i class="fr delete"><a href="javascript:;"><img src="../images/vendorlist-ico8.png"></a></i></div>
+				<div class="bd">
+					<p class="p-tt">
+						<span class="span1">图片</span>
+						<span class="span1">货号</span>
+						<span class="span1">成本</span>
+						<span class="span1">售价</span>
+						<span class="span1">厂家型号</span>
+						<span class="span2">名称</span>
+						<span class="span1">最近报价</span>
+						<span class="span1">最近订单价</span>
+						<span class="span1">操作</span>
+					</p>
+						<p class="p-list">
+							<span class="span1"><img src="../pro-img.jpg" width="40" height="40"></span>
+							<span class="span1 blue">100.00</span>
+							<span class="span1">200.00</span>
+							<span class="span1">200.00</span>
+							<span class="span1">SD-620019</span>
+							<span class="span2">舜迪尔特家用工具19件套定制</span>
+							<span class="span1">200.00</span>
+							<span class="span1">200.00</span>
+							<span class="span1"><a href="">停产</a><a class="pl-10" href="">断开关联</a></span>
+						</p>
+						<p class="p-list">
+							<span class="span1"><img src="../pro-img.jpg" width="40" height="40"></span>
+							<span class="span1 blue">100.00</span>
+							<span class="span1">200.00</span>
+							<span class="span1">200.00</span>
+							<span class="span1">SD-620019</span>
+							<span class="span2">舜迪尔特家用工具19件套定制</span>
+							<span class="span1">200.00</span>
+							<span class="span1">200.00</span>
+							<span class="span1"><a href="">停产</a><a class="pl-10" href="">断开关联</a></span>
+						</p>
+						<p class="p-list">
+							<span class="span1"><img src="../pro-img.jpg" width="40" height="40"></span>
+							<span class="span1 blue">100.00</span>
+							<span class="span1">200.00</span>
+							<span class="span1">200.00</span>
+							<span class="span1">SD-620019</span>
+							<span class="span2">舜迪尔特家用工具19件套定制</span>
+							<span class="span1">200.00</span>
+							<span class="span1">200.00</span>
+							<span class="span1"><a href="">停产</a><a class="pl-10" href="">断开关联</a></span>
+						</p>
+						<p class="p-list">
+							<span class="span1"><img src="../pro-img.jpg" width="40" height="40"></span>
+							<span class="span1 blue">100.00</span>
+							<span class="span1">200.00</span>
+							<span class="span1">200.00</span>
+							<span class="span1">SD-620019</span>
+							<span class="span2">舜迪尔特家用工具19件套定制</span>
+							<span class="span1">200.00</span>
+							<span class="span1">200.00</span>
+							<span class="span1"><a href="">停产</a><a class="pl-10" href="">断开关联</a></span>
+						</p>
+						<p class="p-list">
+							<span class="span1"><img src="../pro-img.jpg" width="40" height="40"></span>
+							<span class="span1 blue">100.00</span>
+							<span class="span1">200.00</span>
+							<span class="span1">200.00</span>
+							<span class="span1">SD-620019</span>
+							<span class="span2">舜迪尔特家用工具19件套定制</span>
+							<span class="span1">200.00</span>
+							<span class="span1">200.00</span>
+							<span class="span1"><a href="">停产</a><a class="pl-10" href="">断开关联</a></span>
+						</p>
+						<p class="p-list">
+							<span class="span1"><img src="../pro-img.jpg" width="40" height="40"></span>
+							<span class="span1 blue">100.00</span>
+							<span class="span1">200.00</span>
+							<span class="span1">200.00</span>
+							<span class="span1">SD-620019</span>
+							<span class="span2">舜迪尔特家用工具19件套定制</span>
+							<span class="span1">200.00</span>
+							<span class="span1">200.00</span>
+							<span class="span1"><a href="">停产</a><a class="pl-10" href="">断开关联</a></span>
+						</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

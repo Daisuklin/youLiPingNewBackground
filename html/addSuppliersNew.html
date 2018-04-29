@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Supplier Label Management</title>
+	<link rel="stylesheet" type="text/css" href="../css/vendorList.css" />
+	<link rel="stylesheet" type="text/css" href="../layer/skin/layer.css" />
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../layer/layer.js"></script>
+	<script type="text/javascript" src="../js/Linkage.js"></script>
+</head>
+<body>
+	<div class="vendorList-wrap">
+		<div class="supplier-label-management-con">
+			<!-- 供应商列表标签模块 -->
+			<div class="vendorList-label clearfix">
+				<div class="vendorList-label-search clearfix">
+					<span class="span-tt fl">添加供应商</span>
+				</div>
+			</div>
+			<!-- 供应商列表模块 -->
+			<div class="addSuppliers-connew">
+		<div class="addSuppliers-connew-top">
+			<p>
+				<span class="span-tt1">公司名称：</span>
+				<span><input type="text" class="supper-input2" value="北京优礼品"></span>
+				<span class="exist">此供应商已存在！</span>
+			</p>
+			<p>
+				<span class="span-tt1">成立时间：</span>
+				<span>
+					<select id="" name="">
+						<option value="全部">2015年</option>
+					</select>
+				</span>
+				<span class="span-tt1">经营模式：</span>
+				<span>
+					<select id="" name="">
+						<option value="全部">厂家</option>
+					</select>
+				</span>
+				<span class="span-tt2">星级：</span>
+				<span>
+					<i class="hover">1</i><i class="hover">2</i><i class="hover">3</i><i class="hover">4</i><i class="hover">5</i>
+				</span>
+				<script type="text/javascript">
+					$(function() {
+						$(".addSuppliers-connew p i").hover(function() {
+							$(this).siblings().removeClass("hover");
+							$(this).addClass("hover");
+							$(this).prevAll().addClass("hover");
+						})
+					})
+				</script>
+			</p>
+			<p>
+				<span class="span-tt1">发票类型：</span>
+				<span>
+					<select id="" name="">
+						<option value="全部">增票</option>
+					</select>
+				</span>
+				<span class="span-tt1">税点：</span>
+				<span>
+					<select id="" name="">
+						<option value="全部">5.00%</option>
+					</select>
+				</span>
+				<span class="span-tt2">网址：</span>
+				<span><input type="text" class="supper-input1" value="www.youlipin.com"></span>
+			</p>
+			<p>
+				<span class="span-tt1">所在地区：</span>
+				<span>
+					<select name="province"><option value="">--请选择省份--</option><option value="北京市">北京市</option><option value="天津市">天津市</option><option value="河北省">河北省</option><option value="山西省">山西省</option><option value="内蒙古自治区">内蒙古自治区</option><option value="辽宁省">辽宁省</option><option value="吉林省">吉林省</option><option value="黑龙江省">黑龙江省</option><option value="上海市">上海市</option><option value="江苏省">江苏省</option><option value="浙江省">浙江省</option><option value="安徽省">安徽省</option><option value="福建省">福建省</option><option value="江西省">江西省</option><option value="山东省">山东省</option><option value="河南省">河南省</option><option value="湖北省">湖北省</option><option value="湖南省">湖南省</option><option value="广东省">广东省</option><option value="广西壮族自治区">广西壮族自治区</option><option value="海南省">海南省</option><option value="重庆市">重庆市</option><option value="四川省">四川省</option><option value="贵州省">贵州省</option><option value="云南省">云南省</option><option value="西藏自治区">西藏自治区</option><option value="陕西省">陕西省</option><option value="甘肃省">甘肃省</option><option value="青海省">青海省</option><option value="宁夏回族自治区">宁夏回族自治区</option><option value="新疆维吾尔自治区">新疆维吾尔自治区</option><option value="香港特别行政区">香港特别行政区</option><option value="澳门特别行政区">澳门特别行政区</option><option value="台湾省">台湾省</option><option value="其它">其它</option></select><select name="city"><option value="">--请选择城市--</option></select><select name="area"><option value="">--请选择地区--</option></select>
+				</span>
+				<script type="text/javascript">
+			                new PCAS("province","city","area","-请选择省份-","-请选择城市-","-请选择地区-");
+			            </script>
+			</p>
+			<p>
+				<span class="span-tt1">具体地址：</span>
+				<span><input type="text" class="supper-input2" value="北京市海淀区中关村大街18号科贸中心写字楼1810室"></span>
+			</p>
+		</div>
+		<div class="div-label">
+			<ul class="label clearfix">
+				<!-- <li class="li1">标签：</li>
+				<li class="li2"><a href="">全部</a></li> -->
+				<div class="hd">
+					<li class="hover">
+						<a href="javascript:;">数码家电</a>
+					</li>
+					<li>
+						<a href="javascript:;">皮具箱包</a>
+					</li>
+				</div>
+				<div class="bd">
+					<div class="label-list-con" style="display: block;">
+	            				<dl>
+					                         <dd>
+					                          	<a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a>
+					                         </dd>
+						</dl>
+					
+					</div>
+					<div class="label-list-con">
+		            			<dl>
+					                         <dd>
+					                          	<a rel="nofollow" href="">移动电源</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">移动电源</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">移动电源</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">移动电源</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">移动电源</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">移动电源</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">移动电源</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">移动电源</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">移动电源</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">移动电源</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">移动电源</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">移动电源</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">移动电源</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">移动电源</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">移动电源</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">移动电源</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">移动电源</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">移动电源</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">移动电源</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">移动电源</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">移动电源</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">移动电源</a><a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">移动电源</a><a rel="nofollow" href="">U盘</a>
+					                         </dd>
+						</dl>
+						
+					</div>
+				</div>
+				<script type="text/javascript">
+				$(function(){
+					$(".addSuppliers-connew .hd li").each(function(index){ //遍历 a 标签 给了 index 参数（索引）
+						$(this).mouseover(function(){ //移动到上边
+							$(".addSuppliers-connew ul.label li.hover").removeClass("hover"); //移除这个class 
+							$(this).addClass("hover"); //加上这个class 
+							$(".addSuppliers-connew .bd > .label-list-con:visible").hide(); //所有可见的 ul 都隐藏
+							$(".addSuppliers-connew .label-list-con:eq(" + index + ")").show(); //eq 遍历 ul 根据 .tab_Tit a 的索引显示
+						})
+					})
+					$(".addtag ul li i").click(function() {
+						$(this).parent().remove();
+
+					})
+				})
+				</script>
+			</ul>
+			<div class="addtag">
+				<span>添加标签：</span>
+				<ul>
+					<li>移动电源<i></i></li><li>移动电源<i></i></li><li>移动电源<i></i></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="div-btn">
+			<p><input type="button" class="cancel" value="取消"><input type="submit" value="保存" class="save"></p>
+		</div>
+	</div>
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+$(function() {
+	$(".vendorList-label-list-top #tag-batch").click(function() {
+		layer.open({
+		    type: 2,
+		    title: ['标签批量添加','height: 50px; line-height: 50px; padding: 0 40px 0 55px; font-size: 15px; color: #687189; background: #eef1f7 url(../images/vendorlist-ico1.jpg) no-repeat 40px center; -webkit-border-radius:5px 5px 0  0; -moz-border-radius:5px 5px 0  0; border-radius:5px 5px 0  0;'],
+		    shadeClose: true,
+		    shade: 0.5,
+		    area: ['95.3%', '425px'],
+		    content: '../html/addSuppliersBatch.html' //iframe的url
+		}); 
+	})
+	$(".vendorList-label-list-top #layer-area").click(function() {
+		layer.open({
+		    type: 2,
+		    title: ['添加供应商','height: 50px; line-height: 50px; padding: 0 40px 0 55px; font-size: 15px; color: #687189; background: #eef1f7 url(../images/vendorlist-ico1.jpg) no-repeat 40px center; -webkit-border-radius:5px 5px 0  0; -moz-border-radius:5px 5px 0  0; border-radius:5px 5px 0  0;'],
+		    shadeClose: true,
+		    shade: 0.5,
+		    area: ['95.3%', '745px'],
+		    content: '../html/addSuppliers.html' //iframe的url
+		}); 
+	})
+})
+</script>

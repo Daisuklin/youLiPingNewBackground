@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Supplier Label Management</title>
+	<link rel="stylesheet" type="text/css" href="../css/vendorList.css" />
+	<link rel="stylesheet" type="text/css" href="../layer/skin/layer.css" />
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../layer/layer.js"></script>
+</head>
+<body>
+	<div class="vendorList-wrap">
+		<div class="supplier-label-management-con">
+			<!-- 供应商列表标签模块 -->
+			<div class="vendorList-label clearfix">
+				<div class="vendorList-label-search clearfix">
+					<span class="span-tt fl">供应商标签管理</span>
+					<form id="searchForm" name="searchForm" method="get" action="search">
+				                        <div class="div-search fl">
+				                            <input name="k" type="text" id="keyword" class="InputBorder fl"  placeholder="杯子">
+				                            <input type="submit" class="go fr" value="搜索">
+				                        </div>
+				                 </form>
+				</div>
+			</div>
+			<!-- 供应商列表模块 -->
+			<div class="vendorList-label-list-top">
+				<a class="fl" href="javascript:;" id="add-tag">添加标签分类</a>
+				<a class="fl" href="javascript:;" id="edit-tag">编辑标签分类</a>
+				<a class="fl" href="javascript:;" id="delete-tag">删除标签分类</a>
+			</div>
+			<div class="vendorList-label-list">
+				<div class="hd">
+					<span class="span1">ID</span>
+					<span class="span2">公司名称</span>
+					<span class="span3">网址</span>
+					<span class="span4">所在地区</span>
+					<span class="span1">电话</span>
+					<span class="span4">联系人</span>
+					<span class="span1">联系人手机</span>
+					<span class="span1">联系人QQ</span>
+					<span class="span1">创建时间</span>
+					<span class="span4">跟进人</span>
+					<span class="span4">商品数</span>
+					<span class="span4">报价数</span>
+					<span class="span4">订单数</span>
+				</div>
+				<div class="bd">
+					<p>
+						<span class="span1">
+						<input class="span-check fl" type="checkbox" name='checkname[]'>
+						<span class="span-id fl">12345</span>
+						</span>
+						<span class="span2">
+							<i>5</i><span class="span-time">3年</span>
+							<span class="span-name"><a href="">公司名称公司名称公司名称</a></span>
+						</span>
+						<span class="span3"><a href="" target="_blank"><img src="../images/a-img.png"></a></span>
+						<span class="span4">北京市</span>
+						<span class="span1">010-12345678</span>
+						<span class="span4">陈小明</span>
+						<span class="span1">15801301300</span>
+						<span class="span1">0123456789</span>
+						<span class="span1">2014-12-19</span>
+						<span class="span4">陈天明</span>
+						<span class="span4">100</span>
+						<span class="span4">10000</span>
+						<span class="span4 bor-r-n">50</span>
+					</p>
+					<p>
+						<span class="span1">
+						<input class="span-check fl" type="checkbox" name='checkname[]'>
+						<span class="span-id fl">12345</span>
+						</span>
+						<span class="span2">
+							<i>5</i><span class="span-time">3年</span>
+							<span class="span-name"><a href="">公司名称公司名称公司名称</a></span>
+						</span>
+						<span class="span3">无</span>
+						<span class="span4">北京市</span>
+						<span class="span1">010-12345678</span>
+						<span class="span4">陈小明</span>
+						<span class="span1">15801301300</span>
+						<span class="span1">0123456789</span>
+						<span class="span1">2014-12-19</span>
+						<span class="span4">陈天明</span>
+						<span class="span4">100</span>
+						<span class="span4">10000</span>
+						<span class="span4 bor-r-n">50</span>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+$(function() {
+	$(".vendorList-label-list-top #tag-batch").click(function() {
+		layer.open({
+		    type: 2,
+		    title: ['标签批量添加','height: 50px; line-height: 50px; padding: 0 40px 0 55px; font-size: 15px; color: #687189; background: #eef1f7 url(../images/vendorlist-ico1.jpg) no-repeat 40px center; -webkit-border-radius:5px 5px 0  0; -moz-border-radius:5px 5px 0  0; border-radius:5px 5px 0  0;'],
+		    shadeClose: true,
+		    shade: 0.5,
+		    area: ['95.3%', '425px'],
+		    content: '../html/addSuppliersBatch.html' //iframe的url
+		}); 
+	})
+	$(".vendorList-label-list-top #layer-area").click(function() {
+		layer.open({
+		    type: 2,
+		    title: ['添加供应商','height: 50px; line-height: 50px; padding: 0 40px 0 55px; font-size: 15px; color: #687189; background: #eef1f7 url(../images/vendorlist-ico1.jpg) no-repeat 40px center; -webkit-border-radius:5px 5px 0  0; -moz-border-radius:5px 5px 0  0; border-radius:5px 5px 0  0;'],
+		    shadeClose: true,
+		    shade: 0.5,
+		    area: ['95.3%', '745px'],
+		    content: '../html/addSuppliers.html' //iframe的url
+		}); 
+	})
+})
+</script>

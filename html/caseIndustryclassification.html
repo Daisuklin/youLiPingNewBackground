@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Supplier Label Management</title>
+	<link rel="stylesheet" type="text/css" href="../css/vendorList.css" />
+	<link rel="stylesheet" type="text/css" href="../layer/skin/layer.css" />
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../layer/layer.js"></script>
+</head>
+<body>
+	<div class="vendorList-wrap">
+		<div class="supplier-label-management-con">
+			<!-- 供应商列表标签模块 -->
+			<div class="vendorList-label clearfix">
+				<div class="vendorList-label-search clearfix">
+					<span class="span-tt fl">行业分类管理</span>
+					<form id="searchForm" name="searchForm" method="get" action="search">
+				                       <!-- <div class="div-search fl">
+				                            <input name="k" type="text" id="keyword" class="InputBorder fl"  placeholder="杯子">
+				                            <input type="submit" class="go fr" value="搜索">
+				                        </div>-->
+				                 </form>
+				</div>
+			</div>
+			<!-- 供应商列表模块 -->
+			<div class="vendorList-label-list-top">
+				<a class="fr" href="javascript:;" id="add-tag">添加行业分类</a>
+			</div>
+			<div class="casemanageindust-label-list">
+				<div class="hd">
+					<span class="span1">编号</span>
+					<span class="span1">排序</span>
+					<span class="span2">行业分类名称</span>
+					<span class="span1">操作</span>
+				</div>
+				<div class="bd">
+					<table cellSpacing="0" cellPadding="0" class="bd-table">
+						<tbody>
+							<tr>
+								<td class="bd-td1">1</td>
+								<td class="bd-td1">2</td>
+								<td class="bd-td2"><span>银行、保险、金融、证券</span>
+								</td>
+								<td class="bd-td3">
+									<a id="edit-v-tag" href="javascript:;">编辑</a>
+									<a id="delete-v-tag" href="javascript:;">删除</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="bd-td1">1</td>
+								<td class="bd-td1">2</td>
+								<td class="bd-td2"><span>银行、保险、金融、证券</span>
+								</td>
+								<td class="bd-td3">
+									<a id="edit-v-tag" href="javascript:;">编辑</a>
+									<a id="delete-v-tag" href="javascript:;">删除</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="bd-td1">1</td>
+								<td class="bd-td1">2</td>
+								<td class="bd-td2"><span>银行、保险、金融、证券</span>
+								</td>
+								<td class="bd-td3">
+									<a id="edit-v-tag" href="javascript:;">编辑</a>
+									<a id="delete-v-tag" href="javascript:;">删除</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="bd-td1">1</td>
+								<td class="bd-td1">2</td>
+								<td class="bd-td2"><span>银行、保险、金融、证券</span>
+								</td>
+								<td class="bd-td3">
+									<a id="edit-v-tag" href="javascript:;">编辑</a>
+									<a id="delete-v-tag" href="javascript:;">删除</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="bd-td1">1</td>
+								<td class="bd-td1">2</td>
+								<td class="bd-td2"><span>银行、保险、金融、证券</span>
+								</td>
+								<td class="bd-td3">
+									<a id="edit-v-tag" href="javascript:;">编辑</a>
+									<a id="delete-v-tag" href="javascript:;">删除</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+$(function() {
+	$("#add-tag").click(function() {
+		layer.open({
+		    type: 2,
+		    title: ['添加行业分类','height: 50px; line-height: 50px; padding: 0 40px 0 55px; font-size: 15px; color: #687189; background: #eef1f7 url(../images/vendorlist-ico1.jpg) no-repeat 40px center; -webkit-border-radius:5px 5px 0  0; -moz-border-radius:5px 5px 0  0; border-radius:5px 5px 0  0;'],
+		    shadeClose: true,
+		    shade: 0.5,
+		    area: ['95.3%', '230px'],
+		    content: '../html/detail/case/caseindustryclassification.html' //iframe的url
+		}); 
+	})
+	$("#edit-tag").click(function() {
+		layer.open({
+		    type: 2,
+		    title: ['编辑标签分类','height: 50px; line-height: 50px; padding: 0 40px 0 55px; font-size: 15px; color: #687189; background: #eef1f7 url(../images/vendorlist-ico1.jpg) no-repeat 40px center; -webkit-border-radius:5px 5px 0  0; -moz-border-radius:5px 5px 0  0; border-radius:5px 5px 0  0;'],
+		    shadeClose: true,
+		    shade: 0.5,
+		    area: ['95.3%', '325px'],
+		    content: '../html/EditTagCategories.html' //iframe的url
+		}); 
+	})
+	$("#delete-tag").click(function() {
+		layer.open({
+		    type: 2,
+		    title: ['删除标签分类','height: 50px; line-height: 50px; padding: 0 40px 0 55px; font-size: 15px; color: #687189; background: #eef1f7 url(../images/vendorlist-ico1.jpg) no-repeat 40px center; -webkit-border-radius:5px 5px 0  0; -moz-border-radius:5px 5px 0  0; border-radius:5px 5px 0  0;'],
+		    shadeClose: true,
+		    shade: 0.5,
+		    area: ['95.3%', '325px'],
+		    content: '../html/DeleteVendorTag.html' //iframe的url
+		}); 
+	})
+
+	// function addTag() {
+	// 	layer.open({
+	// 	    type: 2,
+	// 	    title: ['添加供应商标签','height: 50px; line-height: 50px; padding: 0 40px 0 55px; font-size: 15px; color: #687189; background: #eef1f7 url(../images/vendorlist-ico1.jpg) no-repeat 40px center; -webkit-border-radius:5px 5px 0  0; -moz-border-radius:5px 5px 0  0; border-radius:5px 5px 0  0;'],
+	// 	    shadeClose: true,
+	// 	    shade: 0.5,
+	// 	    area: ['95.3%', '325px'],
+	// 	    content: '../html/AddVendorTag.html', //iframe的url
+	// 	    function() {
+	// 	    	layer.alert( "弹出" );
+	// 	    }
+	// 	}); 
+	// }
+	$("#add-v-tag").click(function() {
+		layer.open({
+		    type: 2,
+		    title: ['添加供应商标签','height: 50px; line-height: 50px; padding: 0 40px 0 55px; font-size: 15px; color: #687189; background: #eef1f7 url(../images/vendorlist-ico1.jpg) no-repeat 40px center; -webkit-border-radius:5px 5px 0  0; -moz-border-radius:5px 5px 0  0; border-radius:5px 5px 0  0;'],
+		    shadeClose: true,
+		    shade: 0.5,
+		    area: ['95.3%', '325px'],
+		    content: '../html/AddVendorTag.html' //iframe的url
+
+		}); 
+	})
+	$("#edit-v-tag").click(function() {
+		layer.open({
+		    type: 2,
+		    title: ['编辑供应商标签','height: 50px; line-height: 50px; padding: 0 40px 0 55px; font-size: 15px; color: #687189; background: #eef1f7 url(../images/vendorlist-ico1.jpg) no-repeat 40px center; -webkit-border-radius:5px 5px 0  0; -moz-border-radius:5px 5px 0  0; border-radius:5px 5px 0  0;'],
+		    shadeClose: true,
+		    shade: 0.5,
+		    area: ['95.3%', '325px'],
+		    content: '../html/EditVendorTag.html' //iframe的url
+		}); 
+	})
+	$("#delete-v-tag").click(function() {
+		layer.open({
+		    type: 2,
+		    title: ['删除供应商标签','height: 50px; line-height: 50px; padding: 0 40px 0 55px; font-size: 15px; color: #687189; background: #eef1f7 url(../images/vendorlist-ico1.jpg) no-repeat 40px center; -webkit-border-radius:5px 5px 0  0; -moz-border-radius:5px 5px 0  0; border-radius:5px 5px 0  0;'],
+		    shadeClose: true,
+		    shade: 0.5,
+		    area: ['95.3%', '280px'],
+		    content: '../html/DeleteVendorTagnew.html' //iframe的url
+		}); 
+	})
+	
+})
+</script>

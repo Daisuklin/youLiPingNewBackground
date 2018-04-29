@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>添加公司图片</title>
+	<link rel="stylesheet" type="text/css" href="../css/vendorList.css" />
+	<link rel="stylesheet" type="text/css" href="../layer/skin/layer.css" />
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../layer/layer.js"></script>
+</head>
+<body>
+	<!-- 添加供应商 -->
+	<div class="addCompany-con">
+		<div class="div-addcompany">
+			<span class="fl">资料图片：</span><span class="fl"><input type="text" class="company-input1" value="图片说明限制十个字以内"></span>
+			<div class="frm fl">
+		                <form class="fl" name="uploadFrom" id="uploadFrom" action="/index.php?r=office/factory/upload&amp;url=upload%2Ffactorymsg" method="post" target="tarframe" enctype="multipart/form-data">
+		                    <input type="file" id="upload_file" class="file-ipt" name="upfile">
+		                    <span class="file-span-ipt" onclick="$('input[id=upload_file]').click();">选择图片……</span>
+		                    <script type="text/javascript">
+		                        $(function() {
+		                            $('input[id=upload_file]').change(function() {
+		                                $('#Pic_Url').val($(this).val());
+		                            });
+		                        })
+		                    </script>
+		                </form>
+		                <input type="text" name="Pic_Url" id="Pic_Url" class="fl" value="">
+		                <iframe src="" width="0" height="0" style="display:none;" name="tarframe"></iframe>
+		            </div>
+		</div>
+		<div class="div-btn">
+			<p><input type="button" class="cancel" value="取消" /><input type="submit" value="保存" class="save" /></p>
+		</div>
+	</div>
+</body>
+</html>

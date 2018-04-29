@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../css/vendorList.css" />
+	<link rel="stylesheet" type="text/css" href="../layer/skin/layer.css" />
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../layer/layer.js"></script>
+</head>
+<body>
+	<div class="vendorList-wrap">
+		<div class="vendorlist-wrap-con">
+			<!-- 供应商列表标签模块 -->
+			<div class="vendorList-label clearfix">
+				<div class="vendorList-label-search clearfix">
+					<span class="span-tt fl">公共供应商</span>
+					<form id="searchForm" name="searchForm" method="get" action="search">
+				                        <div class="div-search fl">
+				                            <input name="k" type="text" id="keyword" class="InputBorder fl"  placeholder="ID\供应商名字">
+				                            <input type="submit" class="go fr" value="搜索">
+				                        </div>
+				                 </form>
+				</div>
+				<div class="vendorList-label-filters"><span>更多筛选</span></div>
+				<div class="vendorList-label-filters-con">
+					<p>
+						<span>经营模式：</span>
+						<span>
+							<select id="" name="" >
+								<option value="全部">全部</option>
+							</select>
+						</span>
+						<span>所在地区：</span>
+						<span>
+							<select id="" name="" >
+								<option value="全部">全部</option>
+							</select>
+						</span>
+						<span>发票类型：</span>
+						<span>
+							<select id="" name="" >
+								<option value="全部">全部</option>
+							</select>
+						</span>
+						<span>星级：</span>
+						<span>
+							<select id="" name="" >
+								<option value="全部">全部</option>
+							</select>
+						</span>
+						<span>图片：</span>
+						<span>
+							<select id="" name="" >
+								<option value="全部">全部</option>
+							</select>
+						</span>
+						<span>标签：</span>
+						<span>
+							<select id="" name="" >
+								<option value="全部">全部</option>
+							</select>
+						</span>
+					</p>
+					<ul class="label">
+						<li class="li1">标签：</li>
+						<li class="li2"><a href="">全部</a></li>
+						<li>
+							<a href="javascript:;">数码家电</a>
+							<div class="label-list-con">
+                            						<dl>
+							                        <dt>数码电子：</dt>
+							                         <dd>
+							                          	<a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a>
+							                         </dd>
+								</dl>
+								<dl>
+							                        <dt>数码电子：</dt>
+							                         <dd>
+							                          	<a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a>
+							                         </dd>
+								</dl>
+								<dl>
+							                        <dt>数码电子：</dt>
+							                         <dd>
+							                          	<a rel="nofollow" href="">U盘</a><a rel="nofollow" href="">U盘</a>
+							                         </dd>
+								</dl>
+							</div>
+							
+						</li>
+						<li>
+							<a href="javascript:;">皮具箱包</a>
+							<div class="label-list-con">
+                            						<dl>
+							                        <dt>皮具箱包：</dt>
+							                         <dd>
+							                          	<a rel="nofollow" href="">移动电源</a><a rel="nofollow" href="">U盘</a>
+							                         </dd>
+								</dl>
+								<dl>
+							                        <dt>皮具箱包：</dt>
+							                         <dd>
+							                          	<a rel="nofollow" href="">移动电源</a><a rel="nofollow" href="">U盘</a>
+							                         </dd>
+								</dl>
+								<dl>
+							                        <dt>皮具箱包：</dt>
+							                         <dd>
+							                          	<a rel="nofollow" href="">移动电源</a><a rel="nofollow" href="">U盘</a>
+							                         </dd>
+								</dl>
+							</div>
+						</li>
+						<script type="text/javascript">
+							$(function() {
+								$(".vendorList-label .vendorList-label-filters-con ul.label li").hover(function() {
+									$(this).find(".label-list-con").show();
+									$(this).addClass("hover");
+								},function() {
+									$(this).find(".label-list-con").hide();
+									$(this).removeClass("hover");
+								});
+								$(".vendorList-label .vendorList-label-filters span").click(function() {
+									var x = $(".vendorList-label-filters-con");
+									$(".vendorList-label-filters-con").toggle();
+									if(x.is(":visible") == false) {
+										$(".vendorList-label .vendorList-label-filters span").html("更多筛选");
+										$(".vendorList-label .vendorList-label-filters span").css("background","url(../images/filters-ico2.jpg) no-repeat 65px center");
+									}else {
+										$(".vendorList-label .vendorList-label-filters span").html("收起筛选");
+										$(".vendorList-label .vendorList-label-filters span").css("background","url(../images/filters-ico1.jpg) no-repeat 65px center");
+									}
+								})
+								$(".all-check").click(function() {
+						                            $('input[name="checkname[]"]').prop("checked",this.checked); 
+						                        });
+
+							})
+						</script>
+					</ul>
+				</div>
+			</div>
+			<!-- 供应商列表模块 -->
+			<div class="vendorList-label-list-top">
+				<input class="span-check all-check fl" type="checkbox">
+				<span class="fl">全选</span>
+				<a class="fl" href="javascript:;" id="tag-batch">标签批量添加</a>
+				<a class="fr" href="javascript:;" id="layer-area">添加供应商</a>
+				<a class="fr" href="javascript:;" id="layer-area">跟进供应商</a>
+				<script type="text/javascript">
+				$(function() {
+					$(".vendorList-label-list-top #tag-batch").click(function() {
+						layer.open({
+						    type: 2,
+						    title: ['标签批量添加','height: 50px; line-height: 50px; padding: 0 40px 0 55px; font-size: 15px; color: #687189; background: #eef1f7 url(../images/vendorlist-ico1.jpg) no-repeat 40px center; -webkit-border-radius:5px 5px 0  0; -moz-border-radius:5px 5px 0  0; border-radius:5px 5px 0  0;'],
+						    shadeClose: true,
+						    shade: 0.5,
+						    area: ['95.3%', '425px'],
+						    content: '../html/addSuppliersBatch.html' //iframe的url
+						}); 
+					})
+					$(".vendorList-label-list-top #layer-area").click(function() {
+						layer.open({
+						    type: 2,
+						    title: ['添加供应商','height: 50px; line-height: 50px; padding: 0 40px 0 55px; font-size: 15px; color: #687189; background: #eef1f7 url(../images/vendorlist-ico1.jpg) no-repeat 40px center; -webkit-border-radius:5px 5px 0  0; -moz-border-radius:5px 5px 0  0; border-radius:5px 5px 0  0;'],
+						    shadeClose: true,
+						    shade: 0.5,
+						    area: ['95.3%', '745px'],
+						    content: '../html/addSuppliers.html' //iframe的url
+						}); 
+					})
+				})
+				</script>
+
+			</div>
+			<div class="publicsupplier-label-list">
+				<div class="hd">
+					<span class="span1">ID</span>
+					<span class="span2">公司名称</span>
+					<span class="span3">网址</span>
+					<span class="span4">所在地区</span>
+					<span class="span1">电话</span>
+					<span class="span4">联系人</span>
+					<span class="span1">联系人手机</span>
+					<span class="span1">联系人QQ</span>
+					<span class="span1">创建时间</span>
+					<span class="span4">商品数</span>
+					<span class="span4">报价数</span>
+					<span class="span4">订单数</span>
+				</div>
+				<div class="bd">
+					<p>
+						<span class="span1">
+						<input class="span-check fl" type="checkbox" name='checkname[]'>
+						<span class="span-id fl">12345</span>
+						</span>
+						<span class="span2">
+							<i>5</i><span class="span-time">3年</span>
+							<span class="span-name"><a href="">公司名称公司名称公司名称</a></span>
+						</span>
+						<span class="span3"><a href="" target="_blank"><img src="../images/a-img.png"></a></span>
+						<span class="span4">北京市</span>
+						<span class="span1">010-12345678</span>
+						<span class="span4">陈小明</span>
+						<span class="span1">15801301300</span>
+						<span class="span1">0123456789</span>
+						<span class="span1">2014-12-19</span>
+						<span class="span4">100</span>
+						<span class="span4">10000</span>
+						<span class="span4 bor-r-n">50</span>
+					</p>
+					<p>
+						<span class="span1">
+						<input class="span-check fl" type="checkbox" name='checkname[]'>
+						<span class="span-id fl">12345</span>
+						</span>
+						<span class="span2">
+							<i>5</i><span class="span-time">3年</span>
+							<span class="span-name"><a href="">公司名称公司名称公司名称</a></span>
+						</span>
+						<span class="span3">无</span>
+						<span class="span4">北京市</span>
+						<span class="span1">010-12345678</span>
+						<span class="span4">陈小明</span>
+						<span class="span1">15801301300</span>
+						<span class="span1">0123456789</span>
+						<span class="span1">2014-12-19</span>
+						<span class="span4">100</span>
+						<span class="span4">10000</span>
+						<span class="span4 bor-r-n">50</span>
+					</p>
+				</div>
+			</div>
+			<div class="pag">
+				<p>
+					<span><a href="">&lt;</a></span>
+					<span><a href="">首页</a></span>
+					<span><a href="">上一页</a></span>
+					<span><i>1</i> / 5</span>
+					<span><a href="">下一页</a></span>
+					<span><a href="">末页</a></span>
+					<span><a href="">&gt;</a></span>
+				</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

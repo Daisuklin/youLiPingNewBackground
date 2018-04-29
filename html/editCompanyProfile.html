@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>添加沟通记录</title>
+	<link rel="stylesheet" type="text/css" href="../css/vendorList.css" />
+	<script type="text/javascript" src="../js/jquery.js"></script>
+</head>
+<body>
+	<!-- 添加供应商 -->
+	<div class="addRecording-con">
+		<div class="div-addRecording">
+			<textarea class="recording-txt" name="">沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录录通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录录</textarea>
+			<p><span>资料图片：</span>
+			<input class="file-ipt" id="fileipt" type="file">
+			<span class="span-ipt" onclick="$('input[id=fileipt]').click();">选择图片……</span>
+			<span><input id="photoCover" class="input-large" type="text"></span>
+			</p>
+			<script type="text/javascript">
+				$(function() {
+					$('input[id=fileipt]').change(function() {
+						$('#photoCover').val($(this).val());
+					});
+				})
+			</script>
+		</div>
+		<div class="div-btn">
+			<p><input type="button" class="cancel" value="取消" /><input type="submit" value="保存" class="save" /></p>
+		</div>
+	</div>
+</body>
+</html>

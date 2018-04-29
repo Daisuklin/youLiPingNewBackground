@@ -1,0 +1,345 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Add customer</title>
+	<link rel="stylesheet" type="text/css" href="../css/vendorList.css" />
+	<link rel="stylesheet" type="text/css" href="../layer/skin/layer.css" />
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../layer/layer.js"></script>
+	<script type="text/javascript" src="../js/Linkage.js"></script>
+</head>
+<body>
+	<div class="vendorList-wrap">
+		<div class="supplier-label-management-con">
+			<!-- 客户列表标签模块 -->
+			<div class="vendorList-label clearfix">
+				<div class="vendorList-label-search clearfix">
+					<span class="span-tt fl">添加客户</span>
+				</div>
+			</div>
+			<!-- 客户列表模块 -->
+			<div class="addSuppliers-connew">
+		<div class="addSuppliers-connew-top" style="border: none !important;">
+			<p>
+				<span class="span-tt1">公司名称：</span>
+				<span><input type="text" class="supper-input2" value="北京优礼品"></span>
+				<span class="exist">此客户已存在！</span>
+			</p>
+				<p><span class="span-tt2 client-span-tt2" style="width: 85px !important;">客户类型：</span>
+				<span id="jibie">
+					<i class="jb1 hoveri"></i><i class="jb2"></i><i class="jb3"></i><i class="jb4"></i>
+				</span></p>
+				
+				<!--<script type="text/javascript">
+					$(function() {
+						$(".addSuppliers-connew p i").hover(function() {
+							$(this).siblings().removeClass("hover");
+							$(this).addClass("hover");
+							$(this).prevAll().addClass("hover");
+						})
+					})
+				</script>-->
+			
+			
+			<p>
+				<span class="span-tt1">所在地区：</span>
+				<span>
+					<select name="province"><option value="">--请选择省份--</option><option value="北京市">北京市</option><option value="天津市">天津市</option><option value="河北省">河北省</option><option value="山西省">山西省</option><option value="内蒙古自治区">内蒙古自治区</option><option value="辽宁省">辽宁省</option><option value="吉林省">吉林省</option><option value="黑龙江省">黑龙江省</option><option value="上海市">上海市</option><option value="江苏省">江苏省</option><option value="浙江省">浙江省</option><option value="安徽省">安徽省</option><option value="福建省">福建省</option><option value="江西省">江西省</option><option value="山东省">山东省</option><option value="河南省">河南省</option><option value="湖北省">湖北省</option><option value="湖南省">湖南省</option><option value="广东省">广东省</option><option value="广西壮族自治区">广西壮族自治区</option><option value="海南省">海南省</option><option value="重庆市">重庆市</option><option value="四川省">四川省</option><option value="贵州省">贵州省</option><option value="云南省">云南省</option><option value="西藏自治区">西藏自治区</option><option value="陕西省">陕西省</option><option value="甘肃省">甘肃省</option><option value="青海省">青海省</option><option value="宁夏回族自治区">宁夏回族自治区</option><option value="新疆维吾尔自治区">新疆维吾尔自治区</option><option value="香港特别行政区">香港特别行政区</option><option value="澳门特别行政区">澳门特别行政区</option><option value="台湾省">台湾省</option><option value="其它">其它</option></select><select name="city"><option value="">--请选择城市--</option></select><select name="area"><option value="">--请选择地区--</option></select>
+				</span>
+				<script type="text/javascript">
+			                new PCAS("province","city","area","-请选择省份-","-请选择城市-","-请选择地区-");
+			            </script>
+			</p>
+			<p>
+				<span class="span-tt1">具体地址：</span>
+				<span><input type="text" class="supper-input2" value="北京市海淀区中关村大街18号科贸中心写字楼1810室"></span>
+			</p>
+			<p>
+			
+				<span class="span-tt1">联系人：</span>
+				<span><input type="text" class="supper-input1 addmargin" value=""></span>
+				<span class="span-tt2">电话：</span>
+				<span><input type="text" class="supper-input1 addmargin" value=""></span>
+				<span class="span-tt2">手机：</span>
+				<span><input type="text" class="supper-input1" value=""></span>
+			</p>
+			<p>
+			
+				<span class="span-tt1">Q Q：</span>
+				<span><input type="text" class="supper-input1 addmargin" value=""></span>
+				<span class="span-tt2">Email：</span>
+				<span><input type="text" class="supper-input1" value=""></span>
+			</p>
+		</div>
+		<div class="Clientadd-con">
+		<div class="div-label div-con1">
+			<div>
+				<p class="paddclient-1 fl">行业分类 ：</p>
+			<p class="paddclient-2">
+				<span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>银行 保险 金融 证券</span>
+				</span>
+				<span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>银行 保险 金融 证券</span>
+				</span>
+				<span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>银行 保险 金融 证券</span>
+				</span><span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>银行 保险 金融 证券</span>
+				</span>
+				<span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>银行 保险 金融 证券</span>
+				</span>
+				<span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>银行 保险 金融 证券</span>
+				</span><span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>银行 保险 金融 证券</span>
+				</span>
+				<span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>银行 保险 金融 证券</span>
+				</span>
+				<span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>银行 保险 金融 证券</span>
+				</span><span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>银行 保险 金融 证券</span>
+				</span>
+				<span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>银行 保险 金融 证券</span>
+				</span>
+				<span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>银行 保险 金融 证券</span>
+				</span><span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>银行 保险 金融 证券</span>
+				</span>
+				<span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>银行 保险 金融 证券</span>
+				</span>
+				<span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>银行 保险 金融 证券</span>
+				</span><span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>银行 保险 金融 证券</span>
+				</span>
+				</span><span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>银行 保险 金融 证券</span>
+				</span>
+				</span><span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>银行 保险 金融 证券</span>
+				</span>
+			</p>
+			</div>
+			<div class="adddiv">
+				<p class="paddclient-1 fl">客户来源 ：</p>
+			<p class="paddclient-2">
+				<span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>不详</span>
+				</span>
+				<span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>北京座机</span>
+				</span>
+				<span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>上海座机</span>
+				</span><span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>上海400</span>
+				</span>
+				<span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>北京400</span>
+				</span>
+				<span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>QQ存留</span>
+				</span><span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>百度商桥</span>
+				</span>
+				<span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>介绍</span>
+				</span>
+				
+			</p>
+			<p style="padding-left: 85px;">
+				<span class="span-tt2" style="width: 85px;">搜索来源：</span>
+				<span><input type="text" class="supper-input1" value="" style="margin-right: 20px;"></span>
+				<span class="span-tt2">搜索词：</span>
+				<span><input type="text" class="supper-input1" value=""></span>
+			</p>
+			</div>
+			<div class="adddiv adddiv2" style="border: none;">
+				<p class="paddclient-1 fl" style="margin-bottom: 10px;">礼赠场景 ：</p>
+			<p class="paddclient-2"style="margin-bottom: 10px;">
+				<span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>不限</span>
+				</span>
+				<span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>客户维系</span>
+				</span>
+				<span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>广告促销</span>
+				</span><span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>商务公关</span>
+				</span>
+				<span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>会议</span>
+				</span>
+				<span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>展会</span>
+				</span><span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>福利</span>
+				</span>
+				<span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>地推活动</span>
+				</span>
+				<span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>网络活动</span>
+				</span>
+				<span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>教育培训</span>
+				</span>
+				<span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>企业耗材</span>
+				</span>
+				<span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>员工使用</span>
+				</span>
+				<span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>节日庆祝</span>
+				</span>
+				<span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>外事出国</span>
+				</span>
+				<span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>周年庆</span>
+				</span>
+				<span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>开业典礼</span>
+				</span>
+				<span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>其他</span>
+				</span>
+				
+			</p>
+			<p><span class="span-tt1" style="width: 146px !important;line-height: normal;">礼赠人群（年龄）：</span>
+				<span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>不限</span>
+				</span>
+				<span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>19岁以下</span>
+				</span>
+				<span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>20-29岁</span>
+				</span>
+				<span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>30-39岁</span>
+				</span>
+				<span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>40-49岁</span>
+				</span>
+				<span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>50以上</span>
+				</span>
+				
+			</p>
+			<p><span class="span-tt1" style="width: 146px !important;line-height: normal;">礼赠人群（性别）：</span>
+				<span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>不限</span>
+				</span>
+				<span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>男</span>
+				</span>
+				<span class="span-list">
+					<span><input name="x" class="span-ipt-rad" type="radio"></span>
+					<span>女</span>
+				</span>
+			</p>
+			</div>
+		</div>
+
+		
+	</div>
+
+		<div class="div-btn" style="height: 70px !important;">
+			<p style="padding-top: 0px"><input type="button" class="cancel" value="取消"><input type="submit" value="保存" class="save"></p>
+		</div>
+	</div>
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+$(function() {
+	$(".vendorList-label-list-top #tag-batch").click(function() {
+		layer.open({
+		    type: 2,
+		    title: ['标签批量添加','height: 50px; line-height: 50px; padding: 0 40px 0 55px; font-size: 15px; color: #687189; background: #eef1f7 url(../images/vendorlist-ico1.jpg) no-repeat 40px center; -webkit-border-radius:5px 5px 0  0; -moz-border-radius:5px 5px 0  0; border-radius:5px 5px 0  0;'],
+		    shadeClose: true,
+		    shade: 0.5,
+		    area: ['95.3%', '425px'],
+		    content: '../html/addSuppliersBatch.html' //iframe的url
+		}); 
+	})
+	$(".vendorList-label-list-top #layer-area").click(function() {
+		layer.open({
+		    type: 2,
+		    title: ['添加供应商','height: 50px; line-height: 50px; padding: 0 40px 0 55px; font-size: 15px; color: #687189; background: #eef1f7 url(../images/vendorlist-ico1.jpg) no-repeat 40px center; -webkit-border-radius:5px 5px 0  0; -moz-border-radius:5px 5px 0  0; border-radius:5px 5px 0  0;'],
+		    shadeClose: true,
+		    shade: 0.5,
+		    area: ['95.3%', '745px'],
+		    content: '../html/addSuppliers.html' //iframe的url
+		}); 
+	})
+})
+$(function(){
+	$("#jibie i").click(function(){
+		$(this).addClass('hoveri').siblings().removeClass('hoveri');
+	})
+})
+</script>

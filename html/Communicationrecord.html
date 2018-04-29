@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>client List</title>
+	<link rel="stylesheet" type="text/css" href="../css/vendorList.css" />
+	<link rel="stylesheet" type="text/css" href="../layer/skin/layer.css" />
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../layer/layer.js"></script>
+</head>
+<body>
+	<div class="vendorList-wrap">
+		<div class="vendorlist-wrap-con">
+			<!-- 供应商列表标签模块 -->
+			<div class="vendorList-label clearfix">
+				<div class="vendorList-label-search clearfix">
+					<span class="span-tt fl">沟通记录（管理员）</span>
+					<form id="searchForm" name="searchForm" method="get" action="search">
+				                        <div class="div-search fl">
+				                            <input name="k" type="text" id="keyword" class="InputBorder fl"  placeholder="ID\供应商名字">
+				                            <input type="submit" class="go fr" value="搜索">
+				                        </div>
+				                 </form>
+				</div>
+				<div class="vendorList-label-filters"><span>更多筛选</span></div>
+				<div class="vendorList-label-filters-con">
+					<p>
+						<span>客户类型：</span>
+						<span>
+							<select id="" name="" >
+								<option value="全部">全部</option>
+								<option value="全部">全部</option>
+								<option value="全部">全部</option>
+							</select>
+						</span>
+						<span>跟进人：</span>
+						<span>
+							<select id="" name="" >
+								<option value="全部">全部</option>
+							</select>
+						</span>
+						
+						
+					</p>
+					
+						
+						<script type="text/javascript">
+							$(function() {
+								$(".vendorList-label .vendorList-label-filters-con ul.label li").hover(function() {
+									$(this).find(".label-list-con").show();
+									$(this).addClass("hover");
+								},function() {
+									$(this).find(".label-list-con").hide();
+									$(this).removeClass("hover");
+								});
+								$(".vendorList-label .vendorList-label-filters span").click(function() {
+									var x = $(".vendorList-label-filters-con");
+									$(".vendorList-label-filters-con").toggle();
+									if(x.is(":visible") == false) {
+										$(".vendorList-label .vendorList-label-filters span").html("更多筛选");
+										$(".vendorList-label .vendorList-label-filters span").css("background","url(../images/filters-ico2.jpg) no-repeat 65px center");
+									}else {
+										$(".vendorList-label .vendorList-label-filters span").html("收起筛选");
+										$(".vendorList-label .vendorList-label-filters span").css("background","url(../images/filters-ico1.jpg) no-repeat 65px center");
+									}
+								})
+								$(".all-check").click(function() {
+						                            $('input[name="checkname[]"]').prop("checked",this.checked); 
+						                        });
+
+							})
+						</script>
+					
+				</div>
+			</div>
+			<!-- 供应商列表模块 -->
+			
+			<div class="communication-label-list">
+				<div class="hd">
+					<span class="span1">客户ID</span>
+					<span class="span2">客户名称</span>
+					<span class="span1">来源</span>
+					<span class="span4">联系人</span>
+					<span class="span5">沟通内容</span>
+					<span class="span4">跟进人</span>
+					<span class="span1">沟通时间</span>
+				</div>
+				<div class="bd">
+					<p>
+						<span class="span1">
+						<span class="span-id fl">12345</span>
+						</span>
+						<span class="span2">
+							<span class="xingji1"></span>
+							<span class="span-name"><a href="">公司名称公司名称公司名称</a></span>
+						</span>
+						<span class="span1">百度商桥</span>
+						<span class="span4">优盘</span>
+						<span class="span5">沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录</span>
+						
+						<span class="span4">陈天明</span>
+						<span class="span1">2014-12-19 23:23:56</span>
+					</p>
+					<p>
+						<span class="span1">
+						<span class="span-id fl">12345</span>
+						</span>
+						<span class="span2">
+							<span class="xingji2"></span>
+							<span class="span-name"><a href="">公司名称公司名称公司名称</a></span>
+						</span>
+						<span class="span1">百度商桥</span>
+						<span class="span4">优盘</span>
+						<span class="span5">沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录沟通记录</span>
+						
+						<span class="span4">陈天明</span>
+						<span class="span1">2014-12-19 23:23:56</span>
+					</p>
+				</div>
+			</div>
+			<div class="pag">
+				<p>
+					<span><a href="">&lt;</a></span>
+					<span><a href="">首页</a></span>
+					<span><a href="">上一页</a></span>
+					<span><i>1</i> / 5</span>
+					<span><a href="">下一页</a></span>
+					<span><a href="">末页</a></span>
+					<span><a href="">&gt;</a></span>
+				</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

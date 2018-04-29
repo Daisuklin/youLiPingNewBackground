@@ -1,0 +1,386 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>vendor List</title>
+	<link rel="stylesheet" type="text/css" href="../css/vendorList.css" />
+	<link href="http://libs.useso.com/js/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../layer/skin/layer.css" />
+    <link rel="stylesheet" type="text/css" href="../bootstrap-treeview.min.css">
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../layer/layer.js"></script>
+	<style type="text/css">
+	.col-sm-4 {    width: 6%;    left: 16%;z-index: 10;}
+	.list-group li{position: relative;height: 50px;font-size: 14px;color: #687189 !important;background: #FFFFFF !important;}
+	.glyphicon{top: 7px;}
+	
+	.list-group-item{border: none;border-bottom: 1px solid #eef1f7;margin-bottom: 0px !important;}
+	 
+	</style>
+</head>
+<body>
+	<div class="vendorList-wrap" style="min-width: 1695px;">
+		<div class="vendorlist-wrap-con">
+			<!-- 供应商列表标签模块 -->
+			<div class="vendorList-label clearfix" style="padding-bottom:28px;">
+				<div class="vendorList-label-search clearfix"style="padding-bottom:40px;">
+					<span class="span-tt fl">分类管理</span>
+					<!--<form id="searchForm" name="searchForm" method="get" action="search">
+				                        <div class="div-search fl">
+				                            <input name="k" type="text" id="keyword" class="InputBorder fl"  placeholder="ID\供应商名字">
+				                            <input type="submit" class="go fr" value="搜索">
+				                       
+				                        </div>
+				                 </form>-->
+				</div>
+				
+			</div>
+			
+			<!-- 供应商列表模块 -->
+			<div class="productlist-label-list-top">
+				<a class="fl" href="javascript:;" id="tag-batch">全部展开</a>
+				<a class="fl" href="javascript:;" id="tag-batch">全部收起</a>
+				<a class="fr" href="javascript:;" id="layer-area">添加分类</a>
+				<script type="text/javascript">
+				$(function() {
+					$(".vendorList-label-list-top #tag-batch").click(function() {
+						layer.open({
+						    type: 2,
+						    title: ['标签批量添加','height: 50px; line-height: 50px; padding: 0 40px 0 55px; font-size: 15px; color: #687189; background: #eef1f7 url(../images/vendorlist-ico1.jpg) no-repeat 40px center; -webkit-border-radius:5px 5px 0  0; -moz-border-radius:5px 5px 0  0; border-radius:5px 5px 0  0;'],
+						    shadeClose: true,
+						    shade: 0.5,
+						    area: ['95.3%', '425px'],
+						    content: '../html/addSuppliersBatch.html' //iframe的url
+						}); 
+					})
+					$(".productlist-label-list-top #layer-area").click(function() {
+						layer.open({
+						    type: 2,
+						    title: ['添加分类','height: 50px; line-height: 50px; padding: 0 40px 0 55px; font-size: 15px; color: #687189; background: #eef1f7 url(../images/vendorlist-ico1.jpg) no-repeat 40px center; -webkit-border-radius:5px 5px 0  0; -moz-border-radius:5px 5px 0  0; border-radius:5px 5px 0  0;'],
+						    shadeClose: true,
+						    shade: 0.5,
+						    area: ['95.3%', '341px'],
+						    content: '../html/detail/product/productaddfenlei.html' //iframe的url
+						}); 
+					})
+				})
+				</script>
+
+			</div>
+			
+			<!-- 供应商列表模块 -->
+			
+			<div class="productclassifiedamanagement-label-list">
+				<div class="hd">
+					<span class="span1">分类ID</span>
+					<span class="span1">排序</span>
+					<span class="span2" style="width:69.5%">分类名称</span>
+					
+					<span class="span2">操作</span>
+				</div>
+				<div class="bd">
+					<!--<p>
+					<span class="span1">
+						<span class="span-id fl">12345</span>
+					</span>
+					<span class="span1">1</span>
+						<span class="span2"  style="width:69.5%">
+						<span class="span-name"><a href="">公司名称公司名称公司名称</a></span>
+						</span>
+						<span class="span2 bor-r-n">
+							<span class="span-name"><a id="">添加子分类</a><a id="">编辑</a><a>删除</a></span>
+						</span>
+					</p>-->
+					 <div class="row">
+				        <div class="col-sm-4">
+				          <div id="treeview1" class=""></div>
+				        </div>
+				        
+				      </div>
+					
+				</div>
+			</div>
+			<div class="pag">
+				<p>
+					<span><a href="">&lt;</a></span>
+					<span><a href="">首页</a></span>
+					<span><a href="">上一页</a></span>
+					<span><i>1</i> / 5</span>
+					<span><a href="">下一页</a></span>
+					<span><a href="">末页</a></span>
+					<span><a href="">&gt;</a></span>
+				</p>
+			</div>
+			<!--<script type="text/javascript">
+						$(function() {
+							$(".productclassifiedamanagement-label-list .bd #add-attr").click(function() {
+								layer.open({
+								    type: 2,
+								    title: ['编辑属性','height: 50px; line-height: 50px; padding: 0 40px 0 55px; font-size: 15px; color: #687189; background: #eef1f7 url(../images/vendorlist-ico1.jpg) no-repeat 40px center; -webkit-border-radius:5px 5px 0  0; -moz-border-radius:5px 5px 0  0; border-radius:5px 5px 0  0;'],
+								    shadeClose: true,
+								    shade: 0.5,
+								    area: ['95.3%', '341px'],
+								    content: '../html/productaddattr.html' //iframe的url
+								}); 
+							})
+						})
+						</script>-->
+		</div>
+	</div>
+  <script src="../js/bootstrap-treeview.min.js"></script>
+	<script src="../js/bootstrap-treeview.js"></script>
+	<script type="text/javascript">
+	  		$(function() {
+	  			//一级内容
+				var txt1='<div class="text1">	<p>	<span class="span1">	<span class="span-id fl">12345</span></span>	<span class="span1">1</span>		<span class="span2"  style="width:69.6%">			<span class="span-name"><a href="">公司名称公司名称公司名称</a></span>			</span><span class="span2 bor-r-n"><span class="span-name2"><a id="">添加子分类</a><a id="">编辑</a><a>删除</a></span>	</span>	</p>		</div>';
+				//二级内容
+				var txt2='<div class="text2">	<p>	<span class="span1">	<span class="span-id fl">12345</span></span>	<span class="span1">1</span>		<span class="span2"  style="width:69.6%">			<span class="span-name"><a href="">child</a></span>			</span><span class="span2 bor-r-n"><span class="span-name2"><a id="">添加子分类</a><a id="">编辑</a><a>删除</a></span>	</span>	</p>		</div>';
+       			//三级内容
+       			var txt3='<div class="text3">	<p>	<span class="span1">	<span class="span-id fl">12345</span></span>	<span class="span1">1</span>		<span class="span2"  style="width:69.6%">			<span class="span-name"><a href="">三级</a><a href="">三级</a><a href="">三级</a><a href="">三级</a><a href="">三级</a><a href="">三级</a><a href="">三级</a></span>			</span><span class="span2 bor-r-n"><span class="span-name2"><a id="">编辑</a><a>删除</a></span>	</span>	</p>		</div>';
+       var defaultData = [
+          {
+            text: txt1,
+            href: '#parent1',
+            tags: ['4'],
+            nodes: [
+              {
+                text: txt2,
+                href: '#child1',
+                tags: ['2'],
+                nodes: [
+                  {
+                    text: txt3,
+                    href: '#grandchild1',
+                    tags: ['0']
+                  },
+                  {
+                    text: txt3,
+                    href: '#grandchild2',
+                    tags: ['0']
+                  }
+                ]
+              },
+              {
+                text: txt2,
+                href: '#child2',
+                tags: ['0']
+              }
+            ]
+          },
+          {
+            text: txt1,
+            href: '#parent2',
+            tags: ['0'],
+            nodes: [
+              {
+                text: txt2,
+                href: '#child1',
+                tags: ['2'],
+                nodes: [
+                  {
+                    text: txt3,
+                    href: '#grandchild1',
+                    tags: ['0']
+                  },
+                  {
+                    text: txt3,
+                    href: '#grandchild2',
+                    tags: ['0']
+                  }
+                ]
+              },
+              {
+                text: txt2,
+                href: '#child2',
+                tags: ['0']
+              }
+            ]
+          },
+          {
+            text: txt1,
+            href: '#parent3',
+             tags: ['0'],
+             nodes: [
+              {
+                text: txt2,
+                href: '#child1',
+                tags: ['2'],
+                nodes: [
+                  {
+                    text: txt3,
+                    href: '#grandchild1',
+                    tags: ['0']
+                  },
+                  {
+                    text: txt3,
+                    href: '#grandchild2',
+                    tags: ['0']
+                  }
+                ]
+              },
+              {
+                text: txt2,
+                href: '#child2',
+                tags: ['0']
+              }
+            ]
+          },
+          {
+            text: txt1,
+            href: '#parent4',
+            tags: ['0'],
+            nodes: [
+              {
+                text: txt2,
+                href: '#child1',
+                tags: ['2'],
+                nodes: [
+                  {
+                    text: txt3,
+                    href: '#grandchild1',
+                    tags: ['0']
+                  },
+                  {
+                    text: txt3,
+                    href: '#grandchild2',
+                    tags: ['0']
+                  }
+                ]
+              },
+              {
+                text: txt2,
+                href: '#child2',
+                tags: ['0']
+              }
+            ]
+          },
+          {
+            text: txt1,
+            href: '#parent5'  ,
+            tags: ['0'],
+            nodes: [
+              {
+                text: txt2,
+                href: '#child1',
+                tags: ['2'],
+                nodes: [
+                  {
+                    text: txt3,
+                    href: '#grandchild1',
+                    tags: ['0']
+                  },
+                  {
+                    text: txt3,
+                    href: '#grandchild2',
+                    tags: ['0']
+                  }
+                ]
+              },
+              {
+                text: txt2,
+                href: '#child2',
+                tags: ['0']
+              }
+            ]
+          }
+        ];
+
+        var alternateData = [
+          {
+            text: 'Parent 1',
+            tags: ['2'],
+            nodes: [
+              {
+                text: 'Child 1',
+                tags: ['3'],
+                nodes: [
+                  {
+                    text: 'Grandchild 1',
+                    tags: ['6']
+                  },
+                  {
+                    text: 'Grandchild 2',
+                    tags: ['3']
+                  }
+                ]
+              },
+              {
+                text: 'Child 2',
+                tags: ['3']
+              }
+            ]
+          },
+          {
+            text: 'Parent 2',
+            tags: ['7']
+          },
+          {
+            text: 'Parent 3',
+            icon: 'glyphicon glyphicon-earphone',
+            href: '#demo',
+            tags: ['11']
+          },
+          {
+            text: 'Parent 4',
+            icon: 'glyphicon glyphicon-cloud-download',
+            href: '/demo.html',
+            tags: ['19'],
+            selected: true
+          },
+          {
+            text: 'Parent 5',
+            icon: 'glyphicon glyphicon-certificate',
+            color: 'pink',
+            backColor: 'red',
+            href: 'http://www.tesco.com',
+            tags: ['available','0']
+          }
+        ];
+
+        var json = '[' +
+          '{' +
+            '"text": "Parent 1",' +
+            '"nodes": [' +
+              '{' +
+                '"text": "Child 1",' +
+                '"nodes": [' +
+                  '{' +
+                    '"text": "Grandchild 1"' +
+                  '},' +
+                  '{' +
+                    '"text": "Grandchild 2"' +
+                  '}' +
+                ']' +
+              '},' +
+              '{' +
+                '"text": "Child 2"' +
+              '}' +
+            ']' +
+          '},' +
+          '{' +
+            '"text": "Parent 2"' +
+          '},' +
+          '{' +
+            '"text": "Parent 3"' +
+          '},' +
+          '{' +
+            '"text": "Parent 4"' +
+          '},' +
+          '{' +
+            '"text": "Parent 5"' +
+          '}' +
+        ']';
+
+
+        $('#treeview1').treeview({
+          data: defaultData
+        });
+
+
+        var $tree = $('#treeview12').treeview({
+          data: json
+        });
+  		});
+	  	</script>
+</body>
+</html>
